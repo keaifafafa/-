@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: antiquewhite;
+				/* 使用动画 */
+				animation-name: dynamic;
+				/* 动画持续时间 */
+				animation-duration: 3s ;
+				/* 动画延迟时间 */
+				animation-delay: 0.5s ;
+				/* 动画时间函数 */
+				animation-timing-function: linear ;
+				/* 动画循环次数   infinite:无限的 */
+				animation-iteration-count: infinite;
+				/* 
+				动画方向
+				alternate:奇数次正向，偶数次反向
+				 */
+				animation-direction: alternate ;
+			}
+			/* 自定义动画名字 */
+			@keyframes dynamic{
+				from{
+					
+				}
+				to{
+					width: 300px;
+					height: 300px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

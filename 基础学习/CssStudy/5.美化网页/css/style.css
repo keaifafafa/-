@@ -1,0 +1,46 @@
+/*要按从外部到内部的顺序*/
+
+/*id 选择器*/
+#duv{
+	/*设置宽度*/
+	width:250px;
+	/*设置背景*/
+	/*background: url(../images/2.jpg);*/
+	
+	/*默认背景是灰色  便于连接*/
+	background: gainsboro;
+}
+
+/*类选择器*/
+.tittle{
+	/*缩进两个字符*/
+	text-indent: 2em;
+	/*background: #0000FF;*/
+	line-height: 80px;
+	/*添加箭头  颜色 图片  平铺方式  位置 */
+	background: #0000FF url(../images/箭头1.png) no-repeat 220px 23px;
+}
+
+
+/*使用一个后代选择器*/
+ul li{
+	/*背景来个灰色*/
+	background: gainsboro;
+	/*把小圆点去掉*/
+	list-style: none;
+	
+}
+
+/*默认时的a标签*/
+a{
+	/*去掉下划线*/
+	text-decoration: none;
+}
+
+/*鼠标悬停时的a标签*/
+a:hover{
+	/*变色*/
+	color: yellow;
+	/*字体变大*/
+	font-size: 50px;	
+}

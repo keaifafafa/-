@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tittle</title>
+	</head>
+	<body>
+		<script>
+			//在es6才出现的  和java里的Class继承十分相似  就是构造器写法不同
+			class student{
+				//js里的构造器
+				constructor(name){
+					this.name = name;
+				}
+				//方法也是直接写的
+				hello(){
+					console.log('Hello Wolrd!');
+				}
+			}
+			
+			class xiaoming extends student{
+				constructor(name,score){
+					super(name);
+					this.score = score;
+				}
+				
+				result(){
+					console.log('score = '+this.score);
+				}
+			}
+//			var Xiaoming = new xiaoming('xiaoming',89);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>盒模型定位布局</title>
+		<style>
+			/* #wrap{
+				width: 1800px;
+			} */
+			#header{
+				height: 80px;
+				width: 100%;
+				border: 1px solid #0000FF;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			.div2{
+				width: 100%;
+				height: 80px;
+				background-color: blue;
+				font-size: 58px;
+				font-family: 华文隶书;
+				text-align: center;
+				line-height: 80px;
+				color: crimson;
+			}
+			#content{
+				/* 作为接下来子元素 绝对定位的基准 */
+				position: relative;
+				height: 400px;
+				/* 相对父元素的 */
+				top: 80px;
+				border: 2px solid seagreen;
+			}
+			#left{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				border: 1px solid #0000FF;
+				width: 170px;
+				height: 100%;
+			}
+			#center{
+				margin: 0px 190px 0px 190px;
+				border: 1px solid red;
+				height: 100%;
+				
+			}
+			#right{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				border: 1px solid #0000FF;
+				width: 170px;
+				height: 100%;
+			}
+			#footer{
+				margin-top: 90px;
+				height: 80px;
+				border: 1px solid #0000FF;
+				text-align: center;
+				line-height: 80px;
+			}
+			.divCss{
+				border: 1px solid red;
+				/* height: auto; */
+				height: 200px;
+				min-height: 200px;
+				top: 10px;
+				float: left;
+				position: relative;
+			}
+			#u_left{
+				width: 35%;
+				left: 5px;
+			}
+			#u_center{
+				width: 25%;
+				left: 10px;
+			}
+			#u_right{
+				width: 38%;
+				left: 16px;
+			}
+			p{
+				clear: both;
+				position: relative;
+				top: 15px;
+				left: 5px;
+			}
+			.thumbnail{
+				float: left;
+				width: 150px;
+				height: 150px;
+				margin-top: 5px;
+				margin-left: 5px;
+				margin-right: 4px;
+				border-radius: 8px 0;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<!-- 头部 -->
+			<div id="header">
+				<div class="div2">河北石油职业技术大学</div>
+			</div>
+			<!-- 内容 -->
+			<div id="content">
+				<div id="left">Left_side</div>
+				<div id="center">
+					<div class="divCss" id="u_left">sss左边</div>
+					<div class="divCss" id="u_center">中间</div>
+					<div class="divCss" id="u_right">右边</div>
+					<p>盒模型布局</p>
+					<img class="thumbnail" src="img/1.jpg">
+					<img class="thumbnail" src="img/2.jpg">
+					<img class="thumbnail" src="img/3.jpg">
+					<img class="thumbnail" src="img/4.jpg">
+					<img class="thumbnail" src="img/5.jpg">
+					<img class="thumbnail" src="img/6.jpg">
+					<img class="thumbnail" src="img/7.jpg">
+				</div>
+				<div id="right">Right_side</div>
+			</div>
+			<div id="footer">Footer</div>
+		</div>
+	</body>
+</html>

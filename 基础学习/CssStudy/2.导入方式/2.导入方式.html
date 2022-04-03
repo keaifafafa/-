@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>四种导入方式</title>
+		
+		
+		<!--内部样式 style-->
+		<style>
+			h1{
+				color: green;
+			}
+		</style>
+		
+		<!--外部链接样式 link
+			html里的，推荐这种
+		-->
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<!--外部导入样式 import 
+			css2.1里的特有的
+		-->
+		<style>
+			@import url("css/style.css" );
+		</style>
+	</head>
+	<body>
+		<!--行内样式 （特小范围修改，偷懒可用）
+			最优先加载( 遵循就近原则 )
+		-->
+		<h1 style="color: deeppink;">
+			我是标题
+		</h1>
+	</body>
+</html>

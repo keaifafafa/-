@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // 传统写法(单个参数)
+    var f1 = function (a) {
+        return a;
+    }
+    console.log(f1(3));
+    // 箭头函数（单个参数）
+    // 参数 => 返回值
+    var f2 = a => a;
+    console.log(f2(5));
+
+    // 传统写法(多个参数)
+    var f3 = function (a, b) {
+        return a + b;
+    }
+    console.log(f3(3, 3));
+    // 箭头函数（多个参数）
+    // (参数1,参数2....) => 返回值
+    var f4 = (a, b) => a + b;
+    console.log(f4(5, 8));
+
+</script>
+
+</html>

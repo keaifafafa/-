@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性选择器</title>
+		<style>
+			p[title]{
+				background-color: pink;
+			}
+			p[title="a"]{
+				background-color: #006400;
+			}
+			p[title^="b"]{
+				background-color: #0000FF;
+			}
+			p[title$="e"]{
+				background-color: #FF0000;
+			}
+			p[title*="x"]{
+				background-color: #FF7F50;
+			}
+			p[title~="c"]{
+				background-color:wheat;
+			}
+			p[title|="aby"]{
+				background-color: #FFFF00;
+			}
+		</style>
+	</head>
+	<body>
+		<p title="你好">段落1</p>
+		<p title="a">段落2</p>
+		<p title="bcd">段落3</p>
+		<p title="xcde">段落4</p>
+		<p title="c d e">段落5</p>
+		<p title="aby-nj-jd-k-1">段落6</p>
+	</body>
+</html>

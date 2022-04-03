@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类选择器</title>
+		<style>
+			/* 默认 */
+			a:link{
+				color:gray;
+				text-decoration: none;
+			}
+			/* 已访问 */
+			a:visited{
+				color: blue;
+				text-decoration: none;
+			}
+			/* 悬停 */
+			a:hover{
+				color:red ;
+				text-decoration: none;
+			}
+			/* 点击 */
+			a:active{
+				background-color: #00CC00;
+				font-size: 20px;
+				text-decoration: none;
+			}
+			/* 第一个字符 */
+			a:first-letter{
+				font-weight: bold;
+				font-family: "宋体";
+			}
+			/* 第一行文字 */
+			a::first-line{
+				font-size: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			发生大法师广发的噶山豆根嘎嘎嘎嘎嘎嘎嘎发生的发生发生发生<br/>
+			的点点滴滴多多多多多多多多多多多
+		</p>
+		<a href="https://www.bilibili.com" target="_blank">
+				点击一下：哔哩哔哩	
+		</a>
+	</body>
+</html>

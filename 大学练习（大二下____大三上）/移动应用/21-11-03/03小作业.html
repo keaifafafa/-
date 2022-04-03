@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小作业</title>
+	</head>
+	<body>
+		<button onclick="msg()">点击我试试</button>
+	</body>
+	<script>
+		// 定义变量 let 是ES6的新规范
+		var m1;
+		var m2;
+		function msg(){
+			// 输入
+			m1 = prompt();
+			m2 = prompt();
+			m1 += m2;
+			// 方式一（弹窗）
+			alert("弹窗：" + m1);
+			// 方式二（控制台）
+			console.log("控制台：" + m1);
+			// 方式三 (页面)
+			document.write("页面：" + m1);
+		}
+	</script>
+</html>

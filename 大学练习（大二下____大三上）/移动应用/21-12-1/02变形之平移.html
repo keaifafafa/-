@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>平移</title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				border: 2px solid #FF0000;
+				position: absolute; /* 绝对定位 相对于浏览器 */
+			}
+			#a{
+				background-color: aqua;
+				transform: translateX(20px); /* 沿着x轴方向平移20px */
+			}
+			#b{
+				top: 150px;
+				background-color: aquamarine;
+				transform: translateY(50px); /* 沿着y轴方向平移20px */
+			}
+			#c{
+				top: 500px;
+				background-color: #FF0000;
+				transform: translate(50px,20px); /* 沿着x轴方向平移50px,y轴20px */
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>  <!--参考变量-->
+		<div id="a"></div>
+		<div style="top:150px;"></div>  <!--参考变量-->
+		<div id="b"></div>
+		<div style="top:500px;"></div>  <!--参考变量-->
+		<div id="c"></div>
+	</body>
+</html>

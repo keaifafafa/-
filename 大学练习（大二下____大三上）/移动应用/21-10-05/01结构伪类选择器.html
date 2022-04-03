@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结构伪类选择器</title>
+		<style type="text/css">
+			:root{
+				background-color: deeppink;
+			}
+			/* p{
+				background-color: aquamarine;
+			} */
+			/* 除非单独设置p标签的颜色，否则不会有效果 */
+			/* :not(p){
+				background-color: antiquewhite;
+			} */
+			/* 匹配父元素且仅有的一个子元素 (父类里面只有 一个 标签 且是 p) */
+			p:only-child{
+				color: red;
+			}
+			/* 匹配父元素的第一个子元素 */
+			li:first-child{
+				background-color: yellow;
+			}
+			/* 匹配父元素的最后一个子元素 */
+			li:last-child{
+				background-color: aqua;
+			}
+			/* 同类型的第一个同级别元素 */
+			p:first-of-type{
+				background-color: white;
+			}
+			p:last-of-type{
+				background-color: blue;
+			}
+			p:nth-of-type(2){
+				background-color: darkgreen;
+			}
+			p:nth-last-of-type(2){
+				background-color: coral;
+			}
+			/* 匹配没有任何子元素的元素 */
+			p:empty{
+				border:3px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>噼噼啪啪铺铺铺铺</p>
+		<ul>
+			<li>语文</li>
+			<li>语文</li>
+			<li>语文</li>
+			<li>语文</li>
+			<li>语文</li>
+			<li>语文</li>
+		</ul>
+		
+		<div>
+			<p>这是一个独生的段落</p>
+		</div>
+		
+		<div>
+			<p>段落群1</p>
+			<p>段落群2</p>
+			<p>段落群3</p>
+			<p>段落群4</p>
+			<p>段落群5</p>
+			<p>段落群6</p>
+			<p>段落群7</p>
+		</div>
+		<p></p>
+	</body>
+</html>

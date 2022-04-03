@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结构伪类选择器</title>
+		<style>
+			/*ul的第一个元素*/
+			/*ul li:first-child{
+				background: aqua;
+			}*/
+			/*ul的最后一个元素*/
+			/*ul li:last-child{
+				background: deeppink;
+			}*/
+			
+			/*只选中P1
+			 选择当前P元素的父级元素，选中父级元素的第一个，并且是当前元素才生效*/
+			p:nth-child(1){
+				background: deeppink;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--<h1>H1</h1>-->
+		<p>P1</p>
+		<p>P2</p>
+		<p>P3</p>
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		
+	</body>
+</html>

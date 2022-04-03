@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>局部变量</title>
+	</head>
+	<body>
+		<script>
+			//局部作用域 let   ES6新特性
+			function abs1(){
+				for(var i= 0; i < 100; i++){
+					console.log(i);
+				}
+				console.log(i + 1);  //使用 var 会造成，多打印一次   for里面的i 能被外面调用
+			}
+			 
+			//将 i 的类型改为 let 就能避免这个问题
+			function abs2(){
+				for(let i= 0; i < 100; i++){
+					console.log(i);
+				}
+				console.log(i + 1);  //换成let后显示 Uncaught ReferenceError: i is not defined
+			
+		</script>
+	</body>
+</html>

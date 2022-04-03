@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义事件分发</title>
+	</head>
+	<body>
+		<div id="app">
+			<todo>
+				<todo-title slot="todo-title" v-bind:title="title"></todo-title>
+				<todo-items slot="todo-items" v-for="(item,index) in todoItems" 
+					v-bind:item="item" v-bind:index="index" v-on:remove="removeItem(index)">
+				</todo-items>
+			</todo>
+		</div>
+		
+	</body>
+	<script src="./js/vue.js"></script>
+	<script>
+		
+		Vue.component("todo",{
+			template: '<div>\
+						<slot name="todo-title"></slot>\
+						<ul>\
+							<slot name="todo-items"></slot>\
+						</ul>\
+					</div>'
+			
+		});
+		
+		Vue.component("todo-title",{
+			props: ['title'],
+			template: '<div>{{title}}</div>'
+		});
+		
+		Vue.component("todo-items",{
+			props: ['index','item'],
+			template: '<div>{{index + 1}} ---> {{item}} <button v-on:click="remove(index)">删除</button></div>',
+			methods: {
+				remove: function(index){
+				//这里的remove是自定义事件名称，需要在HTML中使用v-on:remove的方式
+                //this.$emit 自定义事件分发
+               	this.$emit('remove',index); 
+				}
+			}
+		});
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				title: "小杨IT课程系列",
+				todoItems: ["人工智能","大数据","大前端","机械学习","网络安全"]
+			},
+			methods: {
+				//删除方法
+				removeItem: function(index){
+					console.log("删除了" + this.todoItems[index] + "Successful");
+					 //splice（） 方法向/从数组中添加/删除项目，然后返回被删除的项目，其中index
+					this.todoItems.splice(index,1);
+				}
+			}
+		});
+	</script>
+</html>

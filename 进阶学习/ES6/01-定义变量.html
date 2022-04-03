@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    {
+        var a = 1;
+        // let 是局部变量
+        let b = 2;
+    }
+    console.log(a);
+    console.log(b); //  b is not defined
+
+    // var可以多次定义，但是let只能定义一次
+    var m = 10;
+    var m = 100;
+    let n = 20;
+    let n = 200;
+    console.log(m);
+    console.log(n); // Uncaught SyntaxError: Identifier 'n' has already been declared
+
+</script>
+
+</html>

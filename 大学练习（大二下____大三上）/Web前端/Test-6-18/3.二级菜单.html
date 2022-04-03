@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二级菜单</title>
+		<style type="text/css">
+			div{
+				/* background:url(img/1.jpg); */
+				width: 800px;
+				margin: 0 auto;
+				background: #FF0000;
+			}
+			ul{
+				margin: 0px;
+				padding: 0px;
+				text-decoration: none;
+				background:#FF0000;
+			}
+			/* 子代选择器 */
+			#ul1 > li{
+				float: left;
+				list-style: none;
+				height: 40px;
+				width: 80px;
+				/* 这里一定要加width 和 height */
+				text-align: center;
+				/* background:url(img/1.jpg); */
+				background:#FF0000;
+			}
+			ul li a{
+				text-decoration: none;
+				color:white;
+				/* background:url(img/1.jpg); */
+				/* background:#FF0000; */
+				line-height: 40px;
+				text-align: center;
+			}
+			#ul2{
+				list-style: none;
+				visibility: hidden;/* 隐藏 */
+			}
+			#ul1 li:hover ul{  /* 要重点看这个伪类选择器*/
+				visibility: visible;/* 显示 */
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul id="ul1">
+				<li><a href="https://home.cdpc.edu.cn/">首页</a></li>
+				<li>
+					<a href="https://home.cdpc.edu.cn/dpzw.jsp?urltype=tree.TreeTempUrl&wbtreeid=1013">学校概况</a>
+					<!-- 注意ul的位置 嵌套操作 -->
+					<ul id="ul2">
+						<li><a href="#">学校简介</a></li>
+						<li><a href="#">现任领导</a></li>
+						<li><a href="#">学校标识</a></li>
+						<li><a href="#">校园风光</a></li>
+						<li><a href="#">历史沿革</a></li>
+					</ul>
+				</li>
+				<li><a href="https://home.cdpc.edu.cn/jgsz.jsp?urltype=tree.TreeTempUrl&wbtreeid=1003">管理机构</a></li>
+				<li><a href="#">教学系部</a></li>
+				<li><a href="#">教学运行</a></li>
+				<li><a href="#">学生服务</a></li>
+				<li><a href="#">招生就业</a></li>
+				<li><a href="#">师资团队</a></li>
+				<li><a href="#">科学研究</a></li>
+				<li><a href="#">文化建设</a></li>
+			</ul>
+		</div>
+	</body>
+	<!-- 用来操作dom对象 -->
+	<script type="text/javascript">
+		
+	</script>
+</html>

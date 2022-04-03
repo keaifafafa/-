@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单提交</title>
+		<!--MD5表单加密-->
+		<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	</head>
+	<body>
+		<form action="#" method="post">
+			<p>
+				<span>用户名</span>
+				<input type="text" id="username" name="username"/>
+			</p>
+			<p>
+				<span>密码</span>
+				<input type="password" id="password" name="password"/>
+			</p>
+			<input type="hidden" id="md5-password" name="md5—password"/>
+			<!--绑定事件 onclick 被点击-->
+			<button type="submit" onclick="aaa()">提交按钮</button>
+		</form>
+		
+		<script>
+			function aaa(){
+				var uname = document.getElementById('username');
+				var pwd = document.getElementById('password');
+				var md5pwd = document.getElementById('md5-password');
+				pwd.value = md5(pwd.value);
+//				md5pwd.value = md5(pwd.value);
+				console.log(uname.value);
+				console.log(pwd.value);
+//				这样加密更安全
+				console.log(md5pwd.value);
+			}
+		</script>
+	</body>
+</html>

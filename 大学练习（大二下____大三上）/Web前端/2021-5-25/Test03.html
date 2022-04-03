@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS列表样式</title>
+		<style>
+			/* 无序变有序 */
+			#a{
+				/* 属性值 */
+				list-style-type: upper-roman;
+				list-style-image: url(img/1.jpg);
+				/* outside 默认值 将标志放在文本之外，而且任何换行文本在标志下均不对齐
+				 inside 将标志放在文本之内 而且任何换行文本在标志下均对齐
+				 */
+				list-style-position:outside;
+			}
+			/* 有序变无序 */
+			#b{
+				list-style-type: disc;
+			}
+		</style>
+	</head>
+	<body>
+		<!--无序列表 -->
+		<ul id="a">
+			<li>周一</li>
+			<li>周二</li>
+			<li>周三</li>
+			<li>周四</li>
+			<li>周五</li>
+		</ul>
+		<!-- 有序列表 -->
+		<ol id="b">
+			<li>周一</li>
+			<li>周二</li>
+			<li>周三</li>
+			<li>周四</li>
+			<li>周五</li>
+		</ol>
+	</body>
+</html>

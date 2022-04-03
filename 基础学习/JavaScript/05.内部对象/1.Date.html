@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Date</title>
+	</head>
+	<body>
+		<script>
+			var now =new Date();
+			console.log(now);//获取今天的确切日期
+			now.getDate();//获取今天是几号
+			console.log(now.getDay());//今天星期几
+			now.getMonth();//月份 0~11月
+			now.getFullYear();//年份
+			var second = now.getTime();//时间戳  全世界统一时间（1970-1-1开始到今天的毫秒数）
+			var newTime = new Date(second); //将毫秒数转换为准确时间
+		</script>
+	</body>
+</html>

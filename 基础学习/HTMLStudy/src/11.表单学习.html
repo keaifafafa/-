@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单学习</title>
+	</head>
+	<body>
+		<h1><font color="#FF0000">注册</font></h1>
+		
+		<!--表单form
+			action:表单提交的位置，可以是网址，也可以是一个请求处理地址
+			method:post，get 提交方式
+			get: 我们可以在url中看到账号密码，高效，但是不安全
+			post:比较安全，可以传输大文件
+		-->
+		
+		<form action="8.媒体元素.html" method="get">
+			
+			<!--
+			文本输入框：input type = "text"
+			 value = "可爱发"   默认初始值
+			 maxlength="8" 	     可输入的最大长度
+			 size = "32"	     文本框的大小
+			 hidden ：隐藏域
+			 readonly：只可读
+			 disabled：禁用
+			 placeholder ：提示信息
+			 required：非空判断
+			 pattern：正则表达式
+			-->
+			<p>名字：<input type="text" name="username" value="" placeholder="请填写用户名"/></p>
+			
+			<!--密码框 ： input type = "password"-->
+			<p>密码：<input type="password" name="pwd"  value="123456" required/></p>
+			
+			<!--单选框标签
+				radio 单选框
+				value 单选框的值 后期会传给java程序
+				name 表示组，只有同一组的才可以单选，不然是多选
+				checked 默认选择
+			-->
+			<p>
+				性别:
+				<input type="radio" value="boy" name="sex" disabled/>男
+				<input type="radio" value="girl" name="sex" />女
+			</p>
+			
+			<!--多选框标签
+				checkbox 多选框
+				value 单选框的值 后期会传给java程序
+				checked 默认选择
+			-->
+			<p>爱好：
+				<input type="checkbox" value="basketball" name="hobby" />篮球
+				<input type="checkbox" value="game" name="hobby" />游戏
+				<input type="checkbox" value="sleep" name="hobby" />睡觉
+				<input type="checkbox" value="code" name="hobby" checked/>打代码	
+			</p>
+			
+			<!--下拉框
+				select 选择
+				selected 默认选择
+			-->
+			<p>国家：
+				<select name="列表名称">
+					<option value="Chinese">中国</option>
+					<option value="US" selected>美国</option>
+					<option value="Switzerland">瑞士</option>
+					<option value="India">印度</option>
+				</select>
+			</p>
+			
+			<!--文本域
+				textarea
+			-->
+			<p>意见反馈:
+				<textarea name="textarea" rows="30" cols="10">文本内容</textarea>
+			</p>
+			
+			<!--上传文件
+				file   一定要记得填写name
+				
+			-->
+			<p>上传文件：
+				<input type="file" name="files" />
+				<input type="button" name="upload" value="上传" />
+			</p>
+			
+			
+			<!--一些基本验证-->
+			<!--邮箱验证
+				email 关键字
+				input type="email" 用来验证邮箱格式是否合法
+			-->
+			<p>邮箱：
+					<input type="email" name="email" value="" />
+			</p>
+			
+			<!--URL验证
+				input type="url" 用来验证网址格式正确与否
+			-->
+			<p>URL：
+				<input type="url" name="url" value="" />
+			</p>
+			
+			<!--数字
+				step 增长的基本单位
+			-->
+			<p>数字:
+				<input type="number" name="num" max="100" min="0" step="10" />
+			</p>
+			
+			<!--滑块
+				input type="range"
+			-->
+			<p>音量:
+				<input type="range" name="voice" max="100" min="0" step="10" />
+			</p>
+			
+			<!--搜索
+				input type="search"
+			-->
+			<p>搜索：
+				<input type="search" name="search" />	
+			</p>
+			
+			<!--增强鼠标可用性-->
+			<p>
+				<label for="mark">你点我试试</label>
+				<input type="text" name="id" id="mark" />
+			</p>
+			
+			<p>自定义邮箱验证：
+				<input type="text" name="diyemail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"/>
+			</p>
+			
+			
+			<!--按钮
+				input type="button" 普通按钮
+				value  显示的内容
+				input type="image" 图像按钮
+				input type="submit" 提交按钮
+				input type="reset"  重置按钮
+			-->
+			<p>按钮:
+				<input type="button" name="btn1" value="点击变长" />
+				<input type="image" src="../resources/image/207.jpg" value="点击跳转" />
+			</p>
+			
+			<p>
+				<!--
+					submit 提交
+					reset  重置
+				-->
+				<input type="submit"  value="确认提交"/>
+				<input type="reset" value="清空列表" />
+			</p>
+		</form>
+	</body>
+</html>

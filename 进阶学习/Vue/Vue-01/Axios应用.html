@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<table>
+				<tr v-for="user in userList">
+					<td>{{user.name}}</td>
+					<td>{{user.age}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script src="./js/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				userList: []
+			},
+			// 渲染前
+			created() {
+				debugger
+				// 调用获取数据的方法（Ajax）
+				this.getList()
+			},
+			// 方法
+			methods: {
+				getList() {
+					// 使用 axios 方式 ajax 请求
+					axios.get("user.json")
+						// 请求成功
+						.then(response => {
+							this.userList = response.data.user.items;
+							console.log(this.userList)
+						})
+						// 请求失败
+						.catch(error => {
+							console.log(error)
+						})
+				}
+			}
+		});
+	</script>
+</html>

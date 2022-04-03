@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>事件</title>
+	</head>
+	<body>
+		<!-- 
+			onload : 事件代表页面加载完成以后自动触发 并执行事件a
+			onchange: 当输入框内容发生变换时触发
+		 -->
+		请输入:<input type="text" onchange="transForm()"/>
+		<!-- 鼠标移入和移出 -->
+		<p onmouseover="mEnter(this)" onmouseout="mPass(this)">今天是星期二！</p>
+	</body>
+
+	<script type="text/javascript">
+		function a() {
+			alert('页面加载完成！');
+		}
+		// 把小写变成大写
+		function transForm(){
+			let msg = document.getElementsByTagName('input');
+			// 全部变为大写  改变的是属性
+			msg[0].value = msg[0].value.toUpperCase();
+		}
+		// 鼠标移入
+		function mEnter(x){
+			// let msg = document.getElementsByTagName('p');
+			// msg[0].innerText = '鼠标经过';
+			x.innerText = '鼠标经过';
+		}
+		// 鼠标移出
+		function mPass(z){
+			// let msg = document.getElementsByTagName('p');
+			// msg[0].innerText = '鼠标移出';
+			z.innerText = '鼠标移出';
+		}
+	</script>
+</html>

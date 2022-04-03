@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全局变量</title>
+	</head>
+	<body>
+		<script>
+			var x = 'xxx';
+			
+			window.alert(x);//默认所有的全局变量，都会自动绑定到window对象下
+			
+			//alert(x);   //这个函数本身就是'window'的一个对象
+			
+			var old_alert = window.alert; 
+			
+			old_alert(x);
+			
+			window.alert = function(){
+				
+			};
+			//发现 alert() 失败了  因为上一句进行了函数的更改
+			window.alert(123);
+			
+			//恢复功能
+			window.alert = old_alert;
+			window.alert(520);
+		</script>
+	</body>
+</html>

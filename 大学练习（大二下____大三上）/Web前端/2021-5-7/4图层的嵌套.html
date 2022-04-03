@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.b{
+				/* inline-block 虽然是行内元素 但是可以设置宽度高度 
+				兼具 block 和 inline 的特性
+				*/	
+				display: inline-block; /* 行内显示方式 */
+			}
+			#a{
+				width: 450px;
+				height: 250px;
+				border: 2px solid black;
+			}
+			#a1{
+				width: 40%;
+				height: 100px;
+				margin: 20px;
+				background-color: #9999CC;
+				
+			}
+			#a2{
+				width: 40%;
+				height: 100px;
+				margin: 20px;
+				background-color: #FF0000;
+			}
+			#a3{
+				width: 90%;
+				height: 100px;
+				background-color: yellow;
+				border: 1px solid red;
+				margin-left:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<div id="a1" class="b">
+				这是div1
+			</div>
+			<div id="a2" class="b">
+				这是div2
+			</div>
+			<div id="a3">
+				这是div3
+			</div>
+		</div>
+	</body>
+</html>

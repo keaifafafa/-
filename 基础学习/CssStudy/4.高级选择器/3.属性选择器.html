@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性构造器</title>
+		<style>
+			/*后代选择器*/
+			.demo a{
+				/*浮动*/
+				float: left;
+				/*显示*/
+				display: block;
+				width: 50px;
+				height: 50px;
+				border-radius: 10px;
+				background: #2700ff;
+				text-align: center;
+				color:gainsboro;
+				/*去掉下划线*/
+				text-decoration: none;
+				margin-right: 5px;
+				/*font:bold 20px/50px Ariol; */
+				line-height: 50px;
+			}
+			/*选中含有id的元素*/
+			/*a[id]{
+				background: deeppink;
+			}*/
+			
+			/*选中 id 等于某个具体值的元素*/
+			/*a[id = "first"]{
+				background: yellow;
+			}*/
+			
+			/*选中 含有一部分的元素*/
+			/*a[href *= "http"]{
+				background: yellow;
+			}*/
+			
+			/*选中以某些字符开头的元素*/
+			/*a[href ^= "img"]{
+				background: deeppink;
+			}*/
+			
+			/*选中以某些字符结尾的元素*/
+			a[href $= "pdf"]{
+				background: deeppink;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<p class="demo">
+			<a href="http://www.baidu.com" class="links item first" id="first">1</a>
+			<a href="http://www.bilibili.com" class="links item active" target="_blank">2</a>
+			<a href="img/code.jpg" class="links item first" id="second">3</a>
+			<a href="img/ewm.png" class="links item">4</a>
+			<a href="img/QQ.png" class="links item">5</a>
+			<a href="abc" class="links item">6</a>
+			<a href="/a.pdf" class="links item">7</a>
+			<a href="/abc.pdf" class="links item">8</a>
+			<a href="abc.doc" class="links item">9</a>
+			<a href="abcd.doc" class="links item">10</a>
+		</p>
+	</body>
+</html>

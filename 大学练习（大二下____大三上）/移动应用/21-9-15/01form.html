@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>form表单</title>
+	</head>
+	<body>
+		<div id='content'>
+			<!-- autocomplete就是自动提示填写过的用户名 默认是开的 -->
+			<!-- novalidate 是检查格式的，默认是开启的  下面的操作可以关闭 -->
+			<!-- autofocus 可以自动获得焦点 -->
+			<form action="https://www.baidu.com/" method="get" autocomplete="off" name='login' novalidate="novalidate">
+				账号：<input type="text" name="username" id="username" />
+				<br/>
+				密码：<input type="password" name='password' id="password"/>
+				<br/>
+				邮箱：<input type="email" name="email" id="email"/>
+				<br/>
+				性别：<input type="radio" name="sex" id="boy" value="男"/>男
+				<input type="radio" name="sex" id="girl" value="女"/>女
+				<br/>
+				爱好：<input type="checkbox" name="hobby" value="羽毛球"/>羽毛球
+				<input type="checkbox" name="hobby" value="篮球"/>篮球
+				<input type="checkbox" name="hobby" value="乒乓球"/>乒乓球
+				<input type="checkbox" name="hobby" value="代码"/>代码
+				<br/>
+				请上传你的简历：<input type="file"><br/>
+				请输入网址：<input type="url" autofocus="autofocus"><br/>
+				请输入电话号码：<input type="tel"/><br/>
+				输入搜索关键词：<input type="search"/><br/>
+				请选择颜色：<input type="color" value="#FF00FF"/><br/>
+				请输入数字：<input type="number" min="100" max="1000" step="5"/><br/>
+				请选择数值：<input type="range" min="0" max="100" step="20"><br/>
+				请选择日期：<input type="date"/><br/>
+				请选择月份：<input type="month"/><br/>
+				请选择周：<input type="week"/><br/>
+				请选择时间：<input type="time"/><br/>
+				请选择国际时间：<input type="datetime"/><br/>
+				请选择本国时间：<input type="datetime-local"/><br/>
+				<input type="submit"/>
+			</form>
+		</div>
+	</body>
+</html>

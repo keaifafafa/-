@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本垂直居中</title>
+		<style>
+			div{
+				border: 1px solid red;
+				height: 300px;
+				/* 这种只适用于只有一行的情况 */
+				/* line-height: 300px; */
+				/* 此元素会作为一个表格单元格显示（类似<td> 和 <th>） */
+				display:table-cell ;
+				/* 设置内容垂直居中 */
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			文本水平居中<br/>第二行、、、、、
+		</div>
+	</body>
+</html>

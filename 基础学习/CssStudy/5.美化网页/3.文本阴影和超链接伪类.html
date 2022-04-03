@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本阴影和超链接伪类</title>
+		<style>
+			/*去掉下划线*/
+			#baidu{
+				text-decoration: none;
+			}
+			
+			/*鼠标悬停时出现的效果（这个最常用）*/
+			a:hover{
+				color:deeppink;
+				/*可以变大*/
+				font-size:75px;
+			}
+			/*鼠标按住未释放*/
+			a:active{
+				color:purple;
+				/*可以变大*/
+				font-size:150px;
+			}
+			/*未访问时的状态*/
+			a:link{
+				yellow:red;
+			}
+			
+			/*已访问时的状态*/
+			a:visited{
+				color:yellow;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com" id="baidu">
+			<img src="images/QQ.png" alt="JPG"/>
+			<br />
+			百度一下
+		</a>
+		
+	</body>
+</html>

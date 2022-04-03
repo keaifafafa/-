@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>设置水平与垂直对齐方式</title>
+		<style>
+			h3 {
+				text-align: center;
+				color:red;
+			}
+			hr{
+				color: #00FFFF;
+			}
+			#div1{
+				margin: 10px;
+				width: 700px;
+				height: 60px;
+				background-color: #ccffcc;
+				letter-spacing: 2px;
+				/* line-height: 60px; */
+				text-align: left;
+				text-indent: 2em;
+			}
+			#div2{
+				margin: 10px;
+				width: 700px;
+				height: 60px;
+				background-color: #00ffcc;
+				letter-spacing: 2px;
+				line-height: 60px;
+				text-align: center;
+			}
+			#div3{
+				margin: 10px;
+				width: 700px;
+				height: 60px;
+				background-color: #c8a500;
+				letter-spacing: 2px;
+				line-height: 60px;
+				text-align: right;
+				/* word-spacing: 5px; */
+				text-indent: 2em;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+			}
+			#img1{
+				/* 与父元素 的字体 的顶部对齐 */
+				vertical-align: text-top;
+			}
+			#img2{
+				vertical-align: middle;
+			}
+			#img3{
+				vertical-align: text-bottom;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h3>设置水平与垂直对齐方式</h3>
+		<hr />
+		<div id="div1">
+			<p>[文字水平居左，图像居中顶部]<img src="./img/1.jpg" id='img1'>位于段落中的图像</p>
+		</div>
+		<div id="div2">
+			<p>[文字水平居中，图像居中中部]<img src="./img/1.jpg" id='img2'>位于段落中的图像</p>
+		</div>
+		<div id="div3">
+			<p>[文字水平居右，图像居中右部]<img src="./img/1.jpg" id='img3'>位于段落中的图像</p>
+		</div>
+
+	</body>
+</html>

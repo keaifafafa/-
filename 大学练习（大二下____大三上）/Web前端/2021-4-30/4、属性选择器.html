@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性选择器</title>
+		<style>
+			/* 用于选取带有指定属性的标记 */
+			[title]{
+				font-size: 18px;
+				color: #00CC00;
+			}
+			/* 选取带有指定属性和值的标记 */
+			p[name = "chu"]{
+				/* 斜体 */
+				font-style: italic;
+			}
+			/* 选取属性值中包含指定词汇的标记（用空格分隔的字词列表） */
+			p[name ~= "chu"]{
+				font-weight: bold;
+				background-color: aqua;
+			}
+			/* 选取以指定值开头的 */
+			p[name ^= "chu"]{
+				text-align: center;
+			}
+			/* 选取以指定值结尾的 */
+			p[name $= "jiu"]{
+				color:blue;
+			}
+			/* /* 选取包含指定值的标记 */
+			p[name *= "jiang"]{
+				color:red;
+				text-decoration: underline;
+			} */
+		</style>
+	</head>
+	<body>
+		<h3>属性选择器应用</h3>
+		<p title="p1" name="chu"> [fafa][name="chu"]xxxxxxxxxxxxxxx</p>
+		<p name="jiu chu"> xxxxxxxxxxxxxxx</p>
+		<p name="linchuchu">xxxxxxxxxxxxxxx</p>
+		<p name="changjiang chu huanghe">xxxxxxxxxxxxxxx</p>
+		
+	</body>
+</html>

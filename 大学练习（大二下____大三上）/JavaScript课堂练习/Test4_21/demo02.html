@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		function showdatetime() {
+			date = new Date();// 浏览器端当前时间
+			// alert(date);
+			var year = date.getFullYear();
+			var month = date.getMonth()+1;
+			var day = date.getDate();
+			var hour = date.getHours();
+			var minute = date.getMinutes();
+			var second = date.getSeconds();
+			var xq = date.getDay();  //星期   从零开始
+			var now = '现在时间是：'+year+'年'+month+'月'+day+'日'+hour+'时'+minute+'分'+second+'秒'+"   星期"+xq;
+			alert(now);
+			
+			document.getElementById("datetime").innerHTML = str;
+		}
+	</script>
+	<body onload="showdatetime()">
+
+	</body>
+</html>

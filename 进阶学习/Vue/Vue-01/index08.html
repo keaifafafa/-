@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算属性</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 方法 -->
+			<p>{{currentTime1()}}</p>
+			<!-- 计算属性 可以看成是一个缓存 -->
+			<p>{{currentTime2}}</p>
+		</div>
+		
+	</body>
+	<script src="./js/vue.js"></script>
+	<script>
+		let vm = new Vue({
+			el: "#app",
+			data: {
+				msg: "demo"
+			},
+			methods: {
+				currentTime1: function(){
+					//返回当前时间
+					return Date.now().toLocaleString();
+				}
+			},
+			//计算属性 
+			computed: {//计算属性：methods，computed方法名不能重名，重名之后，只会调用methods的方法
+				currentTime2: function(){
+					this.msg;
+					return Date.now().toLocaleString();
+				}
+			}
+		});
+	</script>
+</html>

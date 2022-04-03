@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一个Vue程序</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 方式一 -->
+        <!-- {{msg}} -->
+        <!-- 方式二  可以利用绑定元素的方式-->
+        <span v-bind:title="msg">
+            鼠标悬停几秒看看！
+        </span>
+    </div>
+</body>
+
+<!-- 导入Vue cdn -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script> -->
+<!-- 导入vue.js -->
+<script src="./js/vue.js"></script>
+<!-- 编写js -->
+<script>
+    let vm = new Vue({
+        el:"#app",
+         /* Model:数据 */
+        data: {
+            msg:"Hello Vue!"
+        }
+    });
+</script>
+</html>

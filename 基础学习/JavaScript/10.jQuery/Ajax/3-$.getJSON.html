@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>$.getJSON</title>
+	</head>
+	<!--
+		$.getJSON
+			语法:
+				$.getJSON('请求地址'，"请求参数",function(形参){
+					
+				});
+				注：getJSON方式要求返回的数据格式满足json格式（json字符串  文件名字可以不是json 但内容一定要是json格式）
+	-->
+	<body>
+	</body>
+	<script src="../lib/jQuery.js"></script>
+	<script type="text/javascript">
+		//虽然 data.txt 和 test.txt 都是txt文件   但是data.txt的内容是json格式，所以可以获取并显示
+		$.getJSON('data/test.txt',{},function(data){
+			console.log(data);
+		});
+	</script>
+</html>

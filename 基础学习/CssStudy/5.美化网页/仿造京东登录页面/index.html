@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子模型</title>
+		
+		<style>
+			/*让 body 下的外边框 内边框 修饰 等于0  常规操作*/
+			h1,ul,a,li,body{
+				margin: 0px;
+				padding: 0;
+				text-decoration: none;
+			}
+			
+			/*border：粗细 样式 样色   solid 是实线  dashed 是虚线*/
+			#box{
+				width: 300px;
+				border: 1px solid red;
+				/*上下默认是0 左右居中*/
+				margin:0 auto;
+			}
+			/*设置表单样式*/
+			form{
+				background: seagreen;
+				padding: inherit;
+			}
+			/*设置二号标题样式*/
+			h2{
+				margin: 0px;
+				padding: 0;
+				text-decoration: none;
+				background:seagreen;
+				text-align: center;
+			}
+			
+			/*使用属性选择器*/
+			input[name = "username"]{
+				border:2px solid #0000FF;
+			}
+			
+			input[name = "pwd"]{
+				border: 2px dashed red;
+			}
+			
+			input[name = "email"]{
+				border: 2px solid deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h2>会员登录</h2>
+			<form action="#" method="get">
+				<div>
+					<span>会员名</span>
+					<input type="text" name="username"/>
+				</div>
+				
+				<div>
+					<span>密码</span>
+					<input type="password" name="pwd"/>
+				</div>
+				
+				<div>
+					<span>邮箱</span>
+					<input type="email" name="email"/>
+				</div>
+				
+			</form>	
+		</div>
+	</body>
+</html>

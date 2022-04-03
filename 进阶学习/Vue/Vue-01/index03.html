@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- 官方还有很多玩法！ -->
+        <button v-on:click="warn()">Please Click Me！</button>
+    </div>
+
+</body>
+<script src="./js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            msg: "Waring!"
+        },
+        // 注意是 methods ！
+        methods:{
+            warn: function(){
+                alert(this.msg);
+            }
+        }
+    }) 
+</script>
+</html>

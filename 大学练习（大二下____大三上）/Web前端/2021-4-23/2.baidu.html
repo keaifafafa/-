@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>仿造百度搜索页面</title>
+		<style type="text/css">
+			#content {
+				text-align: center;
+			}
+
+			#div3 {
+				padding-left: 83px;
+			}
+			ul{
+				/* 去掉装饰 */
+				list-style-type: none;
+			}
+			li {
+				display: inline-block;
+				/* 文字之间的间距 */
+				letter-spacing: 5px;
+				padding: 0px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			#search {
+				width: 470px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="div1">
+				<a href="https://www.baidu.com"><img src="./image/baidu.png"></a>
+			</div>
+			<div id="div2">
+				<ul>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">网页</a></li>
+					<li><a href="#">贴吧</a></li>
+					<li><a href="#">知道</a></li>
+					<li><a href="#">音乐</a></li>
+					<li><a href="#">图片</a></li>
+					<li><a href="#">视频</a></li>
+					<li><a href="#">地图</a></li>
+				</ul>
+			</div>
+			<div id="div3">
+				<input type="search" name="search" id="search" value="" />
+				<input type="button" name="" id="button" value="百度一下" />
+			</div>
+			<div id="div4">
+				<p>问题反馈请<a href="mailto:some@baidu.com？subject=问题反馈">发送邮件</a></p>
+			</div>
+		</div>
+	</body>
+</html>

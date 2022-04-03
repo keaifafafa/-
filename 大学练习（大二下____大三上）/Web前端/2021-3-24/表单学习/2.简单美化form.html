@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简单美化</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			
+			#div1 {
+				width: 1500px;
+				height: 800px;
+				background: url(../img/11.jpg);
+				/*渐变色*/
+				/*background: background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);*/
+				margin: 0;
+				position: fixed;
+			}
+			
+			form {
+				/*内边距*/
+				/*padding: 250px 0 0 0;*/
+				/*让表格往下移动*/
+				/*display:block;
+				margin:150px;*/
+			}
+			
+			td {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<form name="test_from" action="https://www.baidu.com" method="get" target="_blank">
+
+				<table border="1dx">
+					<tr>
+						<!--文本框标签输入-->
+						<td>用户名</td>
+						<td> <input type="text" name="username" value="" placeholder="请输入用户名" /></td>
+					</tr>
+
+					<tr>
+						<td>密码：</td>
+						<td><input type="password" name="pwd" value="" placeholder="请输入密码" /></td>
+					</tr>
+
+					<tr>
+						<!--单选框-->
+						<td>性别：</td>
+						<td><input type="radio" name="sex" value="boy" checked="" />男
+							<input type="radio" name="sex" value="girl" />女</td>
+					</tr>
+
+					<tr>
+						<!--多选框-->
+						<td>兴趣爱好：</td>
+						<td><input type="checkbox" name="hobby" value="code" />代码
+							<input type="checkbox" name="hobby" value="pingpang" />乒乓球
+							<input type="checkbox" name="hobby" value="basketball" />篮球
+							<input type="checkbox" name="hobby" value="read" />阅读
+							<input type="checkbox" name="hobby" value="sing" />唱歌</td>
+					</tr>
+
+					<tr>
+						<!--下拉框-->
+						<td>国籍：</td>
+						<td>
+							<select name="Country" id="">
+								<option value="Chinese">中国</option>
+								<option value="U.S">美国</option>
+								<option value="India" selected="">印度</option>
+								<option value="U.K">英国</option>
+								<option value="Switzerland">瑞士</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<!--按钮-->
+						<td>上传文件:</td>
+						<td><input type="file" name="filename" /></td>
+					</tr>
+
+					<tr>
+						<!--html5的方法，可以了解了解-->
+						<td>生日</td>
+						<td><input type="date" name="birthday" /></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center">
+							<!--提交按钮-->
+							<input type="submit" />
+							<!--复位按钮-->
+							<input type="reset" />
+						</td>
+					</tr>
+				</table>
+
+				<!--一般按钮-->
+				<p align="center">
+					<input type="button" name="按钮" value="按钮" />
+					<br />
+					<input type="button" name="upload" value="上传" />
+				</p>
+
+			</form>
+
+		</div>
+
+	</body>
+
+</html>

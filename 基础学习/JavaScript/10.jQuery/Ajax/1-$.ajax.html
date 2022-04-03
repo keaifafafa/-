@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>$.ajax</title>
+	</head>
+
+	<body>
+		<button id="btn">查看数据</button>
+	</body>
+	<script src="../lib/jQuery.js"></script>
+	<script type="text/javascript">
+		$('#btn').click(function() {
+			$.ajax({
+				type: "get",
+				url: "data/data.txt",
+				async: true,
+				data: {
+
+				},
+				dataType: "json", //返回预期数据类型，如果是json格式，在接受到返回值时会自动封装成json对象
+				success: function(data) {
+					console.log(data);
+					//将字符串转换成json对象(如果本身是json对象的话，就不要转了，会报错)
+					/*var Object = JSON.parse(data);
+					console.log(Object);*/
+					//先把ul 转化成 jQuery对象 然后才可以使用append方法
+					var ul = $("<ul></ul>");
+					//遍历元素
+					for(i = 0; i < data.length; i++) {
+						var user = data[i];
+						//创建li元素
+						var li = "<li>" + user.userName + "</li>";
+						//将li元素设置到ul元素中
+						ul.append(li);
+						//将ul设置到body标签中
+						$('body').append(ul);
+					}
+				}
+			});
+
+		}).mouseout(function(){
+			console.log("鼠标移开了");
+		});
+	</script>
+
+</html>

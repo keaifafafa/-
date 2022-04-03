@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String对象02</title>
+	</head>
+	<body>
+		<script>
+			let str = new String('www.baidu.com');
+			/* 遇到"." 就会进行分割  分成了三部分*/
+			let a = str.split('.');
+			console.log(a);
+			let str2 = new String('how are you');
+			/* 
+			 *  split(target,index);
+			 *  第一个参数是分割的目标，第二个是取到分割后的第几个对象
+			 */
+			let b = str2.split(' ');
+			console.log(b);
+			
+			let c = str2.split(' ',1);
+			console.log(c);
+			
+			// 可以添加连接符
+			let n = b.join('&');
+			console.log(n);
+			console.log(a.join('-'));
+			
+		</script>
+		
+	</body>	
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>溢出文本</title>
+		<style>
+			#a{
+				/* 隐藏超出部分 */
+				overflow: hidden;
+				/* 不换行 */
+				white-space: nowrap;
+				width: 200px;
+				border: 1px solid deeppink;
+				/* 超出的文本被修剪掉了 */
+				text-overflow:clip ;
+			}
+			
+			#b{
+				/* 隐藏超出部分 */
+				overflow: hidden;
+				/* 不换行 */
+				white-space: nowrap;
+				width: 200px;
+				border: 1px solid deeppink;
+				/* 超出的文本被省略号替换掉 */
+				text-overflow:ellipsis ;
+			}
+			
+			p{
+				/* 大小写转换！ 
+					uppercase 转为大写
+					lowercase 转为小写
+				*/
+				text-transform: uppercase;
+			}
+			span{
+				text-decoration: line-through;
+				text-decoration-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+		</div>
+		
+		<div id="b">
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+			you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart you are very smart
+		</div>
+		
+		<p>
+			you are <span>very</span> smart
+		</p>
+	</body>
+</html>

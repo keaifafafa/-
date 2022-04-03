@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="father">
+			<h1>标题一</h1>
+			<p class="P1">P1</p>
+			<p id="P2">P2</p>
+		</div>
+
+		<script>
+			//要删除节点，首先要获取父级节点，在通过父级节点删除自己
+			var self = document.getElementById('P2'); //获取自己的节点
+			var father = P2.parentElement; //获取父级元素
+			father.removeChild(self); //删除节点
+
+			//删除是一个动态的过程
+			father.removeChild(father.children[0]);
+			father.removeChild(father.children[1]);
+			father.removeChild(father.children[2]);
+		</script>
+	</body>
+
+</html>

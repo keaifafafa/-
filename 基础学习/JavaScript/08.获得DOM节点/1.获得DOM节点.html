@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class = "father">
+			<h1>H1</h1>
+			<p class="P1">P1</p>
+			<p id="P2">P2</p>
+		</div>
+		
+		<script>
+			//对应css选择器
+			var h1 = document.getElementsByTagName('h1');//获取标签元素
+			var p1 = document.getElementsByClassName('P1');//获取类选择器元素
+			var p2 = document.getElementById('P2');//获取id 选择器元素
+			//获取父节点下的所有子节点
+			var children = document.getElementsByClassName('father');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Title</title>
+		<style type="text/css">
+			#div1 {
+				margin: 0 auto;
+			}
+			table {
+				border: 1px solid red;
+			}
+			td {
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+
+	<script>
+		//'use strict';
+		alert('test01');
+
+		function logintest() {
+			flag = true;
+			/* s = 'a+b+c+d';
+			//将带+的去掉 分割开来
+			a = s.split("+");
+			for(i = 0; i < a.length;i++){
+				 alert(a[i]);
+			} 
+			*/
+			// 方式一
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			alert(username);
+			/* console.log(username.value()); */
+			// 方式二
+			// s = document.getElementsByName('username');
+			// alert(s.length);
+			// console.log(s.length);
+
+			// 判断用户名和密码是否为空
+			if(username == '' || username == null) {
+				alert('账号密码不能为空！！！');
+				flag = false;
+			} else {
+				// 判断用户名的长度是否在6——10字符之间
+				if((username.length) >= 6 && (username.length) <= 10) {
+					// 判断用户名是否有非法字符
+					usearry = username.split(''); //切割
+					for(i = 0; i < usearry.length; i++) {
+						if(usearry[i] == '#' || usearry[i] == '@' || usearry[i] == '%') {
+							alert('用户名不能出现非法字符！');
+							flag = false;
+							break;
+						}
+					}
+				} else {
+					alert('用户名长度不在6-10字符之间');
+					flag = false;
+				}
+			}
+			//验证密码
+			if(password == '' || password == null) {
+				alert('账号密码不能为空！！！');
+				flag = false;
+			} else {
+				// 判断密码的长度是否在6——10字符之间
+				if((password.length) >= 6 && (password.length) <= 10) {
+					// 判断密码是否有非法字符
+					usearry = password.split(''); //切割
+					for(i = 0; i < usearry.length; i++) {
+						if(usearry[i] == '#' || usearry[i] == '@' || usearry[i] == '%') {
+							alert('密码不能出现非法字符！');
+							flag = false;
+							break;
+						}
+					}
+				} else {
+					alert('密码长度不在6-10字符之间');
+					flag = false;
+				}
+			}
+			//提交
+			if(flag) {
+				loginform.submit();
+			}
+		}
+	</script>
+
+	<body>
+		<div id="div1" align="center">
+			<form action="#" method="post" name="loginform">
+				<table>
+					<tr>
+						<td align="center">用户名:</td>
+						<td><input type="text" name="username" id="username"></td>
+					</tr>
+					<tr>
+						<td align="justify">密码:</td>
+						<td><input type="password" name="pwd" id="password"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" value="登录" onclick="logintest()">&nbsp;&nbsp;&nbsp;<input type="reset" value="取消">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+
+</html>

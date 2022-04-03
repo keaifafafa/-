@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			//假设不存在函数时，可以自己手动抛出异常
+			var abs1 = function(x) {
+				if(typeof x !== 'number') {
+					throw 'not a number';
+				}
+			}
+			
+			//arguments是一个js免费赠送的关键字
+			var abs2 = function(x) {
+				console.log("x=>" + x);
+				for(var i = 0; i < arguments.length; i++) {
+					console.log(arguments[i]);
+				}
+			}
+			
+			//...rest
+			var abs3 = function(a, b, ...rest) {
+				console.log("a=>" + a);
+				console.log("b=>" + b);
+				console.log(rest);
+			}
+			//rest参数只能放在最后面，必须用...标识
+		</script>
+	</body>
+
+</html>

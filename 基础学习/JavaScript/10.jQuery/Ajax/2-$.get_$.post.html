@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>$.get()</title>
+	</head>
+	<!--
+		$.get();
+			语法：
+				$.get("请求地址","请求参数",function(形参){
+					
+				});
+		$.post();    这种是需要有服务器才可以使用
+			语法：
+				$.post("请求地址","请求参数",function(形参){
+					
+				});
+		
+	-->
+	<body>
+	</body>
+	<script src="../lib/jQuery.js"></script>
+	<script type="text/javascript">
+		$.get('data/data.txt',{},function(data){
+			console.log(data);
+		});
+	</script>
+</html>

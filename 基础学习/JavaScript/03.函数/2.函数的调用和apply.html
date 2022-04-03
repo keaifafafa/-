@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数的调用和apply</title>
+	</head>
+	<body>
+		<script>
+			
+			//定义一个对象
+			var fafa = {
+				//注意使用逗号，不是分号
+				name:'发发',
+				birth:2000,
+				age:function(){
+					//获取当前时间
+					var NowTime = new Date().getFullYear();
+					//返回age
+					return NowTime - this.birth; //要使用this把birth进行指向
+				}
+			}
+			
+			//方式二
+			var getAge = function(){
+					//获取当前时间
+					var NowTime = new Date().getFullYear();
+					//返回age
+					return NowTime - this.birth; //this始终只想调用他的人（和Java里的不一样）
+				}
+			
+			var Luccy = {
+				//注意使用逗号，不是分号
+				name:'发发',
+				birth:2002,
+				//采用调用函数的方式
+				age:getAge//不要加()
+			}
+			
+			//apply的应用 在js里可以控制this的指向
+			getAge.apply(fafa,[]);
+		</script>
+	</body>
+</html>

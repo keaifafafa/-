@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 150px;
+				height: 180px;
+				border: 1px solid red;
+				overflow: scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="changeO(this)">单击我试试</button>
+		<br/>
+		<button ondblclick="changeD(this)">双击我试试</button>
+		<br/>
+		姓名：<input onfocus="hasFos(this)" onblur="noFos(this)" />
+		<br/>
+		请随意输入: <input type="text" onkeydown="changeCol(this)" onkeyup="originCol(this)"/>
+		<br/>
+		<div onscroll="scrollNum()" id="div1">
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+			我写了很多字就是为了滚动
+		</div>
+		共滚动了<span>0</span>页
+	</body>
+	<script>
+		// 单击
+		function changeO(x){
+			// let obj = document.getElementsByTagName('button');
+			// obj[0].style.backgroundColor = 'red';
+			x.style.backgroundColor = 'blue';
+		}
+		// 双击
+		function changeD(x){
+			x.style.border = '1px solid red';
+		}
+		// 失去焦点
+		function noFos(obj){
+			if(obj.value.length <= 0){
+				obj.value = '请输入您的姓名！';
+			}
+		}
+		// 获得焦点
+		function hasFos(obj){
+			obj.value = '';
+		}
+		// 键盘按下
+		function changeCol(obj){
+			obj.style.backgroundColor = 'green';
+		}
+		// 键盘抬起
+		function originCol(obj){
+			obj.style.backgroundColor = 'white';
+		}
+		// 记录滚动次数
+		let count = 0;
+		function scrollNum(){
+			count++;
+			let span = document.getElementsByTagName('span');
+			span[0].innerText = count;
+		}
+	</script>
+</html>

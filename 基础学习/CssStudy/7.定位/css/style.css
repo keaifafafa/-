@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#content{
+	margin: 0;
+	padding: 0;
+	width:319px;
+	font-size:12px;
+	line-height:25px ;
+	border: 1px solid red;
+	
+}
+
+/*ul有个默认的边距 所以需要设置下*/
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tipText,.tipBg{
+	width: 319px;
+	height: 25px;
+	position:absolute;
+	top:180px;
+	
+}
+.tipText{
+	color: greenyellow;
+	/*方法一  相当于穿墙术*/
+	/*z-index: 999;*/
+}
+
+.tipBg{
+	background: #000;
+	/*方法二 增加透明度  数字越小，越透明*/
+	opacity: 0.1;
+}

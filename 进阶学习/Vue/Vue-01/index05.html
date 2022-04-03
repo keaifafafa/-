@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue组件</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 读取items里的值  ，然后联动传入 自定义组件里的 props 里  最后在读取自定义组件的内容-->
+        <fafa v-for="item in items" v-bind:val="item"></fafa>
+    </div>
+</body>
+
+<script src="./js/vue.js"></script>
+<script>
+    /* 定义一个组件 */
+    Vue.component("fafa",{
+        props: ['val'],
+        template: '<li>{{val}}</li>'
+    });
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items: ["Java","C++","Golang","Python"]
+        } 
+    });
+</script>
+</html>

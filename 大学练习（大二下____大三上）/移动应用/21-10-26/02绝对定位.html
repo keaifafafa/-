@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位</title>
+		<style type="text/css">
+			div{
+				border: 2px solid red;
+				width: 200px;
+				height: 100px;
+			}
+			#b{
+				position: relative;
+			}
+			#a{
+				/* 
+				绝对定位是相对于父元素的（且父元素也有进行定位，只要不是static就行）
+				不会保留自己原来的位置
+				 */
+				position: absolute;
+				top: 400px;
+				left: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>第一个盒子</div>
+		<div id="b">
+			<div id="a">第二个盒子</div>
+		</div>
+		<div>第三个盒子</div>
+	</body>
+</html>

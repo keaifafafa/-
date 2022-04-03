@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=980, user-scalable=yes">
+		<link rel="stylesheet" href="https://static-cdn-oss.mosoteach.cn/third-party/iconfont/3.2.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/css/fonts-win.css">
+
+		<link rel="stylesheet" href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/css/style.css?v=201909042111">
+		<link rel="stylesheet" href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/css/passport.css?v=20210104122534">
+
+		<link rel="icon" href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="https://static-cdn-oss.mosoteach.cn/third-party/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/js/ui-select.js"></script>
+		<!--    web 页面滑块验证引入js文件-->
+		<script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/ncpc/nc.js?t=2015052012"></script>
+		<script type="text/javascript" src="common/js/mosoteach2.js?t=20191107"></script>
+		<title>复刻版</title>
+	</head>
+
+	<body id="login-view-bgcolor">
+
+		<div id="wrapper">
+			<!-- header start -->
+			<div class="header-box">
+				<div class="header">
+					<div class="logo-box">
+						<a href=""><img src="img/logo-1.png" style="width:169px;height:40px;"></a>
+					</div>
+					<div class="help-box">
+						<a href="https://tp.mosoteach.cn" id="throwing_screen_button" target="_blank" class="grey" style="margin-right: 40px;">手机投屏</a>
+						<a href="http://help.mosoteach.cn" target="_blank" class="grey">帮助</a>
+					</div>
+				</div>
+			</div>
+			<!-- header end -->
+
+			<!-- login-box start -->
+			<div class="main-box">
+				<div class="login-box">
+					<div class="box-border">
+						<div id="login-button-box">
+							<div id="account-login-button">账号密码登录</div>
+							<div id="phone-login-button">短信验证登录</div>
+						</div>
+
+						<div class="login-success">
+							<i class="icon-exclamation-sign"></i>
+							<span></span>
+						</div>
+
+						<div class="login-from">
+							<!-- 账号密码登录  start -->
+							<form class="account-from">
+								<input type="text" name="account_name" autocomplete="off" placeholder="邮箱／手机" id="account-name">
+								<input type="password" name="user_password" maxlength="16" autocomplete="off" placeholder="密码" id="user-pwd">
+								<div class="remember-me-box">
+									<i id="account-login-remember-me" class="icon-check-empty auto-login" data-type="account" data-value="N"></i>
+									<span style="vertical-align: middle;">30 天自动登录</span>
+									<a class="forget-password" href="https://www.mosoteach.cn/web/index.php?c=passport&m=forget_password">忘记密码？</a>
+								</div>
+								<div class="slider-box" data-status="N" style="margin-bottom:25px;display: none;">
+									<div id="account-afs" class="nc-container"></div>
+								</div>
+								<button class="button-big" id="login-button-1" data-status="N" style="height:40px;">登录</button>
+							</form>
+							<!-- 账号密码登录 end -->
+
+							<!-- 短信验证登录 start -->
+							<form class="phone-from">
+								<div class="phone-number-input">
+									<i class="icon-mobile-phone icon-2x"></i>
+									<input type="text" name="phone_number" maxlength="11" autocomplete="off" placeholder="手机号" id="phone-number">
+								</div>
+								<div class="slider-box">
+									<div id="phone-afs" class="nc-container"></div>
+								</div>
+								<div class="verify-box">
+									<input type="text" name="verify_code" maxlength="20" autocomplete="off" placeholder="验证码" id="verify-code" style="margin-bottom:0px;">
+									<button id="get-verify-code" class="button-big disabled" disabled="disabled" data-status="N">获取验证码</button>
+								</div>
+								<div class="remember-me-box" style="margin-bottom:32px;">
+									<i id="phone-login-remember-me" class="icon-check-empty auto-login" data-type="phone" data-value="N"></i>
+									<span style="vertical-align: middle;">30 天自动登录</span>
+									<a class="forget-password" href="https://www.mosoteach.cn/web/index.php?c=passport&m=forget_password">忘记密码？</a>
+								</div>
+								<button class="button-big" id="login-button-2" style="height:40px;">登录</button>
+							</form>
+							<!-- 验证密码登录 end -->
+						</div>
+
+						<div class="forget-pwd-box">
+							<a href="https://www.mosoteach.cn/web/index.php?c=passport&m=user_register" target="_blank">注册蓝墨账号</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://ssoweb.mosobiz.com?return-to=https%3A%2F%2Fwww.mosoteach.cn%2Fweb%2Findex.php%3Fc%3Dpassport">学校账号密码登录</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- login-box end -->
+
+			<!-- footer start -->
+			<div class="footer-box">
+				<div class="footer">
+					<div>
+						<span>为了获得最佳浏览效果，建议在分辨率大于或等于 1024*768 的屏幕下浏览网站　</span>
+						<a href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/browsers.html" target="_blank">建议浏览器</a>
+					</div>
+
+					<div style=" margin:0 auto; line-height: 100%;display:flex;align-items: center;justify-content: center;margin-top: 4px;">
+						<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020877" style="text-decoration:none;">
+							<img src="common/images/beian.png" style="float:left;" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; font-size: 12px; color: #666;">
+								京公网安备 11010802020877号
+							</p>
+						</a>
+						<a target="_blank" href="https://beian.miit.gov.cn/" style="text-decoration:none;color: #666;margin-left:10px;">京ICP备12041916号-4</a>
+					</div>
+					<div>
+						<span style="font-family: Verdana, Tahoma, Arial; display: block;line-height: 24px;">
+                    <script type="text/javascript">
+                        document.write("©2012 - "
+                        + new Date().getFullYear()
+                        + " 北京智启蓝墨信息技术有限公司");//update 自动更新的年份
+                    </script>
+                </span>
+					</div>
+					<div>
+						<span style="font-family: Verdana, Tahoma, Arial; display: block;">
+                    地址：北京市海淀区上地东路 35 号颐泉汇写字楼 316 室 &nbsp;&nbsp;&nbsp;&nbsp;联系电话：400-008-1078
+                </span>
+					</div>
+				</div>
+			</div>
+			<!-- footer end -->
+		</div>
+
+		<!-- 当 Ajax 异步加载的时候需要显示加载图标。请使用公共的 showLoading 和  hideLoading JS 函数-->
+		<div id="shade-box"></div>
+		<div id="close-loading"></div>
+		<div id="loading_bg"></div>
+		<img id="loading" src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/loading.gif" alt="loading">
+
+		<script type="text/javascript">
+			function get_browser() {
+				var ua = navigator.userAgent,
+					tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+				if(/trident/i.test(M[1])) {
+					tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+					return {
+						name: 'MSIE',
+						version: (tem[1] || '')
+					};
+				}
+				if(M[1] === 'Chrome') {
+					tem = ua.match(/\bOPR\/(\d+)/)
+					if(tem != null) {
+						return {
+							name: 'Opera',
+							version: tem[1]
+						};
+					}
+				}
+				M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+				if((tem = ua.match(/version\/(\d+)/i)) != null) {
+					M.splice(1, 1, tem[1]);
+				}
+				return {
+					name: M[0],
+					version: M[1]
+				};
+			}
+			// 检查浏览器
+			var browser = get_browser();
+			// console.log(browser);
+			if(browser.name == 'MSIE' && parseFloat(browser.version) < 10.0) {
+				if(confirm("为了更好的使用体验，请使用推荐的浏览器来访问本站。点击“确定”查看我们推荐的浏览器")) {
+					window.location.href = 'https://www.mosoteach.cn/web/common/browsers.html';
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			var isMobile = 'N';
+			var cfKey = 'FFFF0N0N0000000058A9';
+			var nc_token = [cfKey, (new Date()).getTime(), Math.random()].join(':');
+			var captchaPass = false; // 滑动验证是否成功
+			var verifyData = {};
+
+			//判断web页面打开还是h5手机打开
+			if(isMobile === 'N') {
+				//判断为 web 打开
+				function sliderVerification(name) {
+					if(!name) name = '#account-afs';
+					var scene = 'nc_login';
+					var NC_Opt = {
+						renderTo: name,
+						appkey: cfKey,
+						scene: scene,
+						//  appkey: 'CF_APP_1',
+						//  scene: 'register',
+						token: nc_token,
+						trans: {
+							"key1": "code0"
+						},
+						//  trans:{key1:'code300'},
+						elementID: ["usernameID"],
+						is_Opt: 0,
+						language: "cn",
+						isEnabled: true,
+						timeout: 3000,
+						times: 5,
+
+						callback: function(data) {
+							$.ajax({
+								type: "POST",
+								url: 'https://www.mosoteach.cn/web/index.php?c=passport&m=test_afs',
+								data: {
+									session_id: data.csessionid,
+									token: nc_token,
+									sig: data.sig,
+									scene: scene
+								},
+								dataType: "json",
+								success: function(msg) {
+									if(msg.result_code == 0) {
+										verifyData = msg.data;
+										if(name === '#account-afs') {
+											$('#login-button-1').attr('data-status', 'N');
+										} else {
+											captchaPass = true;
+											$("#get-verify-code").removeClass('disabled').attr('disabled', false).attr('data-status', 'Y');
+											$('#login-button-2').attr('data-status', 'N');
+										}
+									}
+								}
+							});
+						}
+					}
+					var nc = new noCaptcha(NC_Opt);
+					nc.upLang('cn', {
+						_startTEXT: "请按住滑块，拖动到最右边",
+						_yesTEXT: "验证通过",
+						_error300: "哎呀，出错了，点击<a href=\"javascript:__nc.reset()\">刷新</a>再来一次",
+						_errorNetwork: "网络不给力，请<a href=\"javascript:__nc.reset()\">点击刷新</a>",
+					});
+					return nc;
+				}
+
+			} else {
+				//使用手机打开
+				function sliderVerifications(name) {
+					if(!name) name = '#account-afs';
+					var scene = 'nc_login_h5';
+					var nc = NoCaptcha.init({
+						renderTo: name,
+						appkey: cfKey,
+						scene: scene,
+						token: nc_token,
+						customWidth: 300,
+						trans: {
+							"key1": "code200"
+						},
+						elementID: ["usernameID"],
+						is_Opt: 0,
+						language: "cn",
+						timeout: 10000,
+						retryTimes: 5,
+						errorTimes: 5,
+						inline: false,
+						apimap: {
+							// 'analyze': '//a.com/nocaptcha/analyze.jsonp',
+							// 'uab_Url': '//aeu.alicdn.com/js/uac/909.js',
+						},
+						bannerHidden: false,
+						initHidden: false,
+						callback: function(data) {
+							$.ajax({
+								type: "POST",
+								url: 'https://www.mosoteach.cn/web/index.php?c=passport&m=test_afs',
+								data: {
+									session_id: data.csessionid,
+									token: nc_token,
+									sig: data.sig,
+									scene: scene
+								},
+								dataType: "json",
+								success: function(msg) {
+									if(msg.result_code == 0) {
+										verifyData = msg.data;
+										if(name === '#account-afs') {
+											$('#login-button-1').attr('data-status', 'N');
+										} else {
+											captchaPass = true;
+											var phone = $('#phone-number').val();
+											if(phone) {
+												$("#get-verify-code").removeClass('disabled').attr('disabled', false).attr('data-status', 'Y');
+											}
+											$('#login-button-2').attr('data-status', 'N');
+										}
+									}
+								}
+							});
+						},
+						error: function(s) {
+							// alert(s);
+						}
+					});
+					NoCaptcha.setEnabled(true);
+					nc.reset(); //请务必确保这里调用一次reset()方法
+					NoCaptcha.upLang('cn', {
+						'LOADING': "加载中...", //加载
+						'SLIDER_LABEL': "请向右滑动验证", //等待滑动
+						'CHECK_Y': "验证通过", //通过
+						'ERROR_TITLE': "非常抱歉，这出错了...", //拦截
+						'CHECK_N': "验证未通过", //准备唤醒二次验证
+						'OVERLAY_INFORM': "经检测你当前操作环境存在风险，请输入验证码", //二次验证
+						'TIPS_TITLE': "验证码错误，请重新输入" //验证码输错时的提示
+					});
+					// return nc;
+				}
+			}
+
+			$(function() {
+				// 每100毫秒检测一次用户输入的值 符合规则则让获取验证码按钮变成蓝色并且可点击
+				$('#phone-number').focus(function() {
+					var self = $(this);
+					var phoneReg = /^1\d{10}/;
+					var timerId = setInterval(function() {
+						var data = $.trim($(self).val());
+						if(phoneReg.test(data) && $("#get-verify-code").attr('data-status') === 'Y') {
+							$("#get-verify-code").removeClass('disabled').attr('disabled', false).attr('data-status', 'Y');
+						} else {
+							// $("#get-verify-code").addClass('disabled').attr('disabled',true).attr('data-status','N');
+						}
+					}, 100);
+					$(self).attr('data-timer-id', timerId);
+					$('.phone-number-input .icon-mobile-phone').css('color', '#00BBDD');
+				});
+
+				$('#phone-number').blur(function(e) {
+					if($(this).attr('data-timer-id')) {
+						clearInterval(+($(this).attr('data-timer-id')));
+					}
+					$(this).attr('data-timer-id', '');
+					$('.phone-number-input .icon-mobile-phone').css('color', '#999');
+				});
+
+				// 获取验证码
+				$("#get-verify-code").click(function() {
+					$('.login-success').hide();
+					// 获取获取验证码按钮的状态
+					var status = $(this).attr('data-status');
+					if(status === 'N') {
+						return false;
+					}
+					var phoneNumber = $.trim($('#phone-number').val());
+					// 声明匹配手机号的规则 1开头 11位数字
+					var phoneReg = /^1\d{10}/;
+					if(!phoneReg.test(phoneNumber)) {
+						$('.login-success span').text('手机号格式不正确，请重新输入');
+						$('.login-success').show();
+						return false;
+					}
+
+					// 如果获取验证码按钮的状态不为N 点击之后按钮的文字变为‘获取中...’，并且将按钮置为不可点击状态
+					$(this).addClass('disabled').attr('disabled', true).attr('data-status', 'N').text('获取中...');
+					// 获取手机号
+					$.ajax({
+						type: "POST",
+						url: "https://www.mosoteach.cn/web/index.php?c=passport&m=get_verify_code",
+						data: {
+							'phone_number': phoneNumber,
+							'type': 'LGN',
+							'scene': verifyData.scene || '',
+							'time': verifyData.time || '',
+							'sign': verifyData.sign || '',
+						},
+						dataType: "json",
+						success: function(msg) {
+							var msgText = '';
+							switch(msg.result_code) {
+								case 0:
+									var s = msg.count_down; //获取验证码的时间间隔
+									var retrieve = setInterval(function() {
+										if(s > 0) {
+											s--;
+											$("#get-verify-code").addClass('disabled').attr('disabled', true).attr('data-status', 'N').text('重新获取(' + s + 's)');
+											$('#phone-number').attr('disabled', true).addClass('color-66');
+										} else {
+											clearInterval(retrieve); //清除定时器
+											$('#phone-number').attr('disabled', false).removeClass('color-66');
+											$("#get-verify-code").addClass('disabled').attr('disabled', true).attr('data-status', 'N').text('获取验证码');
+											if(isMobile === 'N') {
+												sliderVerification('#phone-afs');
+											} else {
+												sliderVerifications('#phone-afs')
+											}
+										}
+									}, 1000);
+									break;
+								case -1:
+									msgText = '验证通过才能登录';
+									break;
+								case 1101:
+									msgText = '手机号格式不正确，请重新输入'
+									break;
+								case 1103:
+									msgText = '用户不存在';
+									break
+								case 1104:
+									msgText = '请求次数过多，请稍后再试';
+									break;
+								case 4007:
+									msgText = msg.result_msg;
+									break;
+								default:
+									msgText = '应用错误';
+									// MTWeb.showAjaxError(resp);
+							}
+							if(msg.result_code !== 0) {
+								// if(msg.result_code == 1104) {
+								//     $("#get-verify-code").removeClass('disabled').attr('disabled', false).attr('data-status', 'Y').text('获取验证码');
+								// } else {
+								//     $("#get-verify-code").addClass('disabled').attr('disabled', true).attr('data-status', 'N').text('获取验证码');
+								// }
+								$('.login-success span').text(msgText);
+								$('.login-success').show();
+
+								if(isMobile === 'N') {
+									sliderVerification('#phone-afs');
+								} else {
+									sliderVerifications('#phone-afs');
+								}
+								$("#get-verify-code").addClass('disabled').attr('disabled', true).attr('data-status', 'N').text('获取验证码');
+							}
+						}
+					});
+					return false;
+				});
+			});
+
+			// 切换为短信验证登录方式
+			$('#phone-login-button').click(function() {
+				if(isMobile === 'N') {
+					sliderVerification('#phone-afs')
+				} else {
+					sliderVerifications('#phone-afs')
+				}
+				// 切换为短信验证 滑块判断状态设置为false 验证码置灰
+				captchaPass = false;
+				$("#get-verify-code").addClass('disabled').attr('disabled', true).attr('data-status', 'N');
+
+				// 切换登录方式时 将30天自动登录按钮置为初始状态
+				$('.account-from .auto-login').removeClass('icon-check').addClass('icon-check-empty').attr('data-value', 'N');
+				$('#account-auto-login').val('N');
+				$('.account-from .remember-me-box').css('color', '#888');
+				//切换为短信验证 隐藏输入账号的文本框 让输入手机号的输入框显示 同事改变按钮的背景
+				$('.account-from').hide();
+				$('.phone-from').show();
+				$('#account-login-button').css('color', '#646464');
+				$('#account-login-button').css('font-family', 'PingFangSC-Regular');
+				$('#phone-login-button').css('color', '#323232');
+				$('#phone-login-button').css('font-family', 'PingFangSC-Medium');
+				$('#login-button-box').css('background-image', 'url("https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/login-tab-phone.png?v=20190618")');
+				$('.login-success').hide();
+			});
+			// 切换为账号密码方式登录
+			$('#account-login-button').click(function() {
+				// 将滑动验证置为初始状态
+				// 切换登录方式时 将30天自动登录按钮置为初始状态
+				$('.phone-from .auto-login').removeClass('icon-check').addClass('icon-check-empty').attr('data-value', 'N');
+				$('#phone-auto-login').val('N');
+				$('.phone-from .remember-me-box').css('color', '#888');
+				//切换为账号密码登录 隐藏输入账号的文本框 让输入手机号的输入框显示 同事改变按钮的背景
+				$('.account-from').show();
+				$('.phone-from').hide();
+				$('#account-login-button').css('color', '#323232');
+				$('#account-login-button').css('font-family', 'PingFangSC-Medium');
+				$('#phone-login-button').css('color', '#646464');
+				$('#phone-login-button').css('font-family', 'PingFangSC-Regular');
+				$('#login-button-box').css('background-image', 'url("https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/login-tab-account.png?v=20190618")');
+				$('.login-success').hide();
+			});
+
+			// 30天自动登录
+			$('.auto-login').click(function() {
+				var checkboxType = $(this).attr('data-type'); //获取当前点击的是账号登录页还是短信验证登录页
+				var autoLoginStatus = $(this).attr('data-value'); //获取是否选中自动登录按钮
+				if(checkboxType === 'account') { // 账号登录时选择30天自动登录
+					if(autoLoginStatus === 'N') { //如果当前为为选中 则改变按钮的样式并设置为选中状态 (data-value=Y)
+						$(this).removeClass('icon-check-empty').addClass('icon-check').attr('data-value', 'Y');
+						$('#account-auto-login').val('Y');
+						$('.account-from .remember-me-box').css('color', '#00BBDD');
+					} else { //否则 将取消选中状态
+						$(this).removeClass('icon-check').addClass('icon-check-empty').attr('data-value', 'N');
+						$('#account-auto-login').val('N');
+						$('.account-from .remember-me-box').css('color', '#888');
+					}
+				} else { //短信验证页面选择30 天自动登录
+					if(autoLoginStatus === 'N') { //如果当前为为选中 则改变按钮的样式并设置为选中状态 (data-value=Y)
+						$(this).removeClass('icon-check-empty').addClass('icon-check').attr('data-value', 'Y');
+						$('#phone-auto-login').val('Y');
+						$('.phone-from .remember-me-box').css('color', '#00BBDD');
+					} else { //否则 将取消选中状态
+						$(this).removeClass('icon-check').addClass('icon-check-empty').attr('data-value', 'N');
+						$('#phone-auto-login').val('N');
+						$('.phone-from .remember-me-box').css('color', '#888');
+					}
+				}
+			});
+
+			// 账号登录
+			$('#login-button-1').click(function() {
+				var status = $(this).attr('data-status');
+				if(status === 'Y') {
+					$('.login-success span').text('验证通过才能登录');
+					$('.login-success').show();
+					return false;
+				}
+				//检测账号，密码是否为空
+				var accountName = $('#account-name').val().replace(/\s/g, ''); //获取用户输入的账号
+				var userPwd = $('#user-pwd').val(); //获取用户输入的密码
+
+				if(accountName.length <= 0) { //如果为空 提示错误
+					$('.login-success span').text('请输入账号');
+					$('.login-success').show();
+					return false;
+				}
+				if(userPwd.length <= 0) {
+					$('.login-success span').text('请输入密码');
+					$('.login-success').show();
+					return false;
+				}
+
+				var reg = /^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+				var preg = /^1\d{10}/;
+				if(!reg.test(accountName) && !preg.test(accountName)) {
+					$('.login-success span').text('账号格式不正确，请重新输入');
+					$('.login-success').show();
+					return false;
+				}
+
+				var rememberMe = $('#account-login-remember-me').attr('data-value');
+				//设置按钮不可点 防止网络较慢时多次点击按钮
+				$('#login-button-1').addClass('disabled').attr('disabled', true);
+
+				$.ajax({
+					type: "post",
+					url: "https://www.mosoteach.cn/web/index.php?c=passport&m=account_login",
+					data: {
+						'account_name': accountName,
+						'user_pwd': userPwd,
+						'remember_me': rememberMe,
+						'scene': verifyData.scene || '',
+						'time': verifyData.time || '',
+						'sign': verifyData.sign || '',
+					},
+					dataType: "json",
+					success: function(msg) {
+						switch(msg.result_code) {
+							case 0:
+								window.location.href = "https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=index";
+								break;
+							case -1:
+								$('.login-success span').text('验证通过才能登录');
+								$('.login-success').show();
+								break;
+							case 1007:
+								if(isMobile === 'N') {
+									sliderVerification();
+								} else {
+									sliderVerifications()
+								}
+								// $('#login-button-1').removeClass('disabled').attr('disabled',false);//恢复登录按钮的可点击状态
+								$('.login-success span').text('用户名或密码错误，请重新输入');
+								$('.login-success').show();
+								$('.account-from .remember-me-box').css('margin-bottom', '20px');
+								$('.slider-box').show();
+								var slider_status = $('.slider-box').attr('data-status');
+								$('#login-button-1').attr('data-status', 'Y');
+								break;
+							case 4007:
+								if(isMobile === 'N') {
+									sliderVerification();
+								} else {
+									sliderVerifications()
+								}
+								$('.login-success span').text(msg.result_msg);
+								$('.login-success').show();
+								$('.account-from .remember-me-box').css('margin-bottom', '20px');
+								$('.slider-box').show();
+								$('#login-button-1').attr('data-status', 'Y');
+								break;
+							case 1008: // 密码连续错误5次
+								showAccountLoginError(msg.result_msg);
+								break;
+							default:
+								showAccountLoginError('');
+								MTWeb.showAjaxError(msg);
+						}
+						$('#login-button-1').removeClass('disabled').attr('disabled', false);
+					},
+					error: function(e) {
+						$('#login-button-1').removeClass('disabled').attr('disabled', false); //恢复登录按钮的可点击状态
+						alert('发生未知错误，请稍后重试！');
+					}
+				});
+				return false;
+			});
+
+			function showAccountLoginError(msg) {
+				isMobile === 'N' ? sliderVerification() : sliderVerifications();
+				$('.login-success span').text(msg || '');
+				$('.login-success').show();
+				$('.account-from .remember-me-box').css('margin-bottom', '20px');
+				$('.slider-box').show();
+				$('#login-button-1').attr('data-status', 'Y');
+			}
+
+			//短信验证登录
+			$('#login-button-2').click(function() {
+				var phoneNumber = $.trim($('#phone-number').val()); //获取用户输入的手机号
+				var verifyCode = $.trim($('#verify-code').val()); //获取验证码
+
+				// 如果手机号为空 提示手机号不能为空
+				if(phoneNumber.length <= 0) {
+					$(this).attr('data-status', 'Y');
+					$('.login-success span').text('请输入手机号');
+					$('.login-success').show();
+					return false;
+				}
+				// 声明匹配手机号的规则 1开头 11位数字
+				var preg = /^1\d{10}/;
+				if(!preg.test(phoneNumber)) {
+					$(this).attr('data-status', 'Y');
+					$('.login-success span').text('手机号格式不正确，请重新输入');
+					$('.login-success').show();
+					return false;
+				}
+				// 检测验证码是否为空
+				if(verifyCode.length <= 0) {
+					$(this).attr('data-status', 'Y');
+					$('.login-success span').text('请输入验证码');
+					$('.login-success').show();
+					return false;
+				}
+
+				//防止网络较慢时 多次点击
+				$('#login-button-2').addClass('disabled').attr('disabled', true);
+
+				var rememberMe = $('#phone-login-remember-me').attr('data-value');
+				// 如果满足 手机号不为空且格式正确，验证码不为空 的条件 发送ajax验证信息是否正确
+				$.ajax({
+					type: "POST",
+					url: "https://www.mosoteach.cn/web/index.php?c=passport&m=phone_login",
+					data: {
+						'phone_number': phoneNumber,
+						'verification_code': verifyCode,
+						'remember_me': rememberMe,
+					},
+					dataType: "json",
+					success: function(msg) {
+						var msgText = '';
+						switch(msg.result_code) {
+							case 0:
+								window.location.href = "https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=index";
+								break;
+							case 1101:
+								msgText = '验证码错误，请重新输入';
+								break;
+							case 1102:
+								msgText = '验证码已过期，请重新获取';
+								break;
+							case 1103:
+								msgText = '用户不存在';
+								break;
+							case 4007:
+							case 1107: // 验证码错误 5 次
+								msgText = msg.result_msg;
+								break;
+							default:
+								msgText = '应用错误';
+								MTWeb.showAjaxError(msg);
+						}
+						if(msg.result_code !== 0) {
+							$('#login-button-2').removeClass('disabled').attr('disabled', false).attr('data-status', 'N');
+							$('.login-success span').text(msgText);
+							$('.login-success').show();
+						}
+					}
+				});
+				return false;
+			});
+		</script>
+	</body>
+	</html

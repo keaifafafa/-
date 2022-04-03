@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>左左右右中间不浮动</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			#header {
+				width: 100%;
+				height: 150px;
+				background-color: purple;
+			}
+			#main {
+				width: 100%;
+				height: 500px;
+				background-color: antiquewhite;
+			}
+
+			#left {
+				width: 20%;
+				height: 100%;
+				background-color: red;
+				float: left;
+			}
+
+			#center {
+				width: 60%;
+				height: 100%;
+				background-color: green;
+				/* float: left; */
+				padding: 0px 20%;
+			}
+
+			#right {
+				width: 20%;
+				height: 100%;
+				background-color: aqua;
+				float: right;
+			}
+
+			#footer {
+				width: 100%;
+				height: 150px;
+				background-color: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+
+		</div>
+		<div id="main">
+			<!-- 这里需要更改下 右div 和 中间div的位置 -->
+			<div id="left">
+
+			</div>
+			<div id="right">
+
+			</div>	
+			<div id="center">
+			
+			</div>
+		</div>
+		<div id="footer">
+
+		</div>
+	</body>
+</html>

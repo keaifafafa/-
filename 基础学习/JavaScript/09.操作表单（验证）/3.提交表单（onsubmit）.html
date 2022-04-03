@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>onsubmit</title>
+		<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	</head>
+	<body>
+		<!--表单绑定事件
+			onsubmit = 绑定一个提交检测函数
+			假如返回值是false 就不会跳转
+			true 就会跳转
+		-->
+		<form action="http://www.baidu.com" method="post" onsubmit="return aaa();">
+			<p>
+				<span>用户名</span>
+				<input type="text" id="username" name="username"/>
+			</p>
+			<p>
+				<span>密码</span>
+				<input type="password" id="password" name="password"/>
+			</p>
+			<input type="hidden" id="md5-password" name="md5—password"/>
+			<button type="submit">提交按钮</button>
+		</form>
+		
+		<script type="text/javascript">
+			function aaa(){
+				var uname = document.getElementById('username');
+				var pwd = document.getElementById('password');
+				var md5pwd = document.getElementById('md5-password');
+				pwd.value = md5(pwd.value);
+//				md5pwd.value = md5(pwd.value);
+				console.log(uname.value);
+				console.log(pwd.value);
+//				这样加密更安全
+				console.log(md5pwd.value);
+				return false;
+			}
+		</script>
+	</body>
+</html>

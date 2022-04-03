@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画2</title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				background-color: #FF0000;
+				animation-name: dynamic;
+				animation-duration: 5s;
+				animation-delay: 1s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				/* 
+				 * 在动画不播放时，要应用的颜色 
+				 * none：默认开始前后都是默认的背景色
+				 * backwards：开始前（包括delay）都是0%时的颜色
+				 * forwards: 完成后，颜色时最后（100%时）的颜色，默认是div的背景色
+				 * both：backwards和 forwards 的结合
+				 */
+				animation-fill-mode: both ;
+			}
+			/* 鼠标over div 就暂停 */
+			div:hover{
+				/* 状态 */
+				animation-play-state: paused;
+			}
+			@keyframes dynamic{
+				0%{
+					margin-left: 0px;
+					background-color: yellow;
+				}
+				25%{
+					margin-left: 50px;
+					background-color: #0000FF;
+				}
+				50%{
+					margin-left: 100px;
+					background-color: pink;
+				}
+				75%{
+					margin-left: 150px;
+					background-color: gray;
+				}
+				100%{
+					margin-left: 200px;
+					background-color: greenyellow;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

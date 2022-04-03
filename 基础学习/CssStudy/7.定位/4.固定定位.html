@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>固定定位</title>
+		<style>
+			#father{
+				width: 300px;
+				height: 300px;
+				margin: 20px;
+				border: 1px solid darkred;
+				/*给父类设置相对位置*/
+				position: relative;
+				
+			}
+			div{
+				margin: 5px;
+				
+			}
+			.div1{
+				width: 280px;
+				height: 50px;
+				line-height:50px ;
+				background:red ;
+				/*绝对位置  默认是相对于浏览器定位*/
+				position:absolute;
+				/*移动方向距离*/
+				right:20px;
+			}
+			.div2{
+				width: 280px;
+				height: 50px;
+				line-height:50px ;
+				background:blueviolet ;
+				
+			}
+			.div3{
+				width: 280px;
+				height: 50px;
+				line-height:50px ;
+				background:gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="father">
+			<div class="div1">第一个盒子</div>
+			<div class="div2">第二个盒子</div>
+			<div class="div3">第三个盒子</div>
+		</div>
+	</body>
+</html>

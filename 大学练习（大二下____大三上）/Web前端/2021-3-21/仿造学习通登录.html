@@ -1,0 +1,491 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>仿造用户登录</title>
+<link href="/css/login/basic.css" rel="stylesheet" type="text/css">
+<link href="/css/login/login.css" rel="stylesheet" type="text/css">
+<link href="/css/guide/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery.min.js"></script> 
+<script type="text/javascript" src="/js/v5/jquery.cookie.js"></script> 
+<script type="text/javascript" src="/js/common/jquery.base64.js"></script> 
+<script type="text/javascript">
+	if($.cookie("browserLocale") == "en_US"){
+ 		$.getScript("/js/common/global_en.js"); 
+ 	}else{
+ 		$.getScript("/js/common/global_zh.js"); 
+ 	}
+</script>
+<script type="text/javascript" src="/js/login/login0.js?v=4"></script> 
+<script type="text/javascript">
+	function init(){
+		  getNumCode();
+	
+	      	         $("#verCode_tr").addClass("zl_tr_td_hide");
+		  
+		  		  	 $("#numVerCode_tr").removeClass("zl_tr_td_hide");
+		  	
+		  
+	      		    	$("#joinUserA").hide();
+				$("#schoolNametd").removeClass("zblue");
+	       		$("#schoolNametd").addClass("zblack");
+		  
+		 
+		 
+		 var nv1=$("#unameId").val();
+		 if(nv1==null || ""==nv1){
+			$("#nameNoteId").show();
+		 }else{
+		    $("#nameNoteId").hide();
+		 }
+		  
+		 //filter_notice(3631);
+		 		     hide_third_login(0);
+		 		
+		 //获取notice
+		 showNotice(3631);
+		 //如果不需要二维码 将fid复制到此
+		 //获取guide 34914
+		 if((3631==34914||3631==124516||3631==125875||3631==63409||3631==46841||3631==2620||3631==11880||3631==18868||3631==329||3631==196||3631==145||3631==146||3631==147||3631==148||3631==149||3631==153||3631==155||3631==156||3631==157||3631==158||3631==108||3631==166||3631==164||3631==165||3631==167||3631==176||3631==179||3631==181||3631==184||3631==182||3631==186||3631==195||3631==202||3631==123||3631==115||3631==124||3631==125||3631==197||3631==126||3631==110||3631==117||3631==199||3631==121||3631==723||3631==169||3631==133||3631==193||3631==1134||3631==1135||3631==1136||3631==1137||3631==1138||3631==1139||3631==1140||3631==1141||3631==1142||3631==1143||3631==1144||3631==1145||3631==1146||3631==1147||3631==1148||3631==1149||3631==1150||3631==1151||3631==1152||3631==1153||3631==206||3631==1154||3631==1155||3631==1156||3631==1157||3631==1158||3631==1159||3631==1160||3631==1161||3631==1162||3631==1163||3631==209||3631==1164||3631==1165||3631==1166||3631==1167||3631==1168||3631==1169||3631==1170||3631==1171||3631==1172||3631==1173||3631==1174||3631==1175||3631==1176||3631==1177||3631==1178||3631==1179||3631==1180||3631==1181||3631==1182||3631==207||3631==995||3631==1191||3631==1192||3631==1193||3631==1194||3631==1195||3631==208||3631==1196||3631==1201||3631==1202||3631==210||3631==1207||3631==1208||3631==1209||3631==1210||3631==1211||3631==1212||3631==1213||3631==211||3631==1216||3631==1218||3631==1221||3631==1228||3631==1233||3631==1234||3631==1235||3631==98||3631==1223||3631==1238||3631==1240||3631==1242||3631==1245||3631==138||3631==1252||3631==1258||3631==1259||3631==1260||3631==1261||3631==1262||3631==1264||3631==1268||3631==1270||3631==1273||3631==1274||3631==1276||3631==188||3631==1279||3631==1280||3631==1281||3631==1282||3631==1283||3631==1284||3631==1285||3631==1287||3631==1288||3631==1289||3631==1290||3631==1291||3631==1292||3631==1293||3631==1294||3631==1295||3631==1296||3631==1297||3631==1298||3631==1299||3631==1300||3631==1301||3631==1302||3631==1303||3631==1304||3631==1306||3631==1307||3631==1308||3631==1309||3631==1310||3631==275||3631==1313||3631==1314||3631==1317||3631==1318||3631==1319||3631==1320||3631==1321||3631==1323||3631==1324||3631==1325||3631==1326||3631==1327||3631==1328||3631==189||3631==1329||3631==1330||3631==1334||3631==1337||3631==1373||3631==1375||3631==1379||3631==1380||3631==1382||3631==1387||3631==1388||3631==1390||3631==1391||3631==1392||3631==1393||3631==1395||3631==1396||3631==1397||3631==1402||3631==1407||3631==1408||3631==1411||3631==1412||3631==1413||3631==1416||3631==1417||3631==1419||3631==1421||3631==1422||3631==0||3631==1427||3631==1428||3631==1432||3631==1435||3631==1436||3631==1440||3631==1441||3631==1450||3631==1453||3631==1456||3631==1457||3631==1458||3631==1459||3631==1460||3631==1460||3631==1461||3631==1462||3631==1463||3631==1464||3631==1466||3631==1469||3631==1471||3631==1473||3631==1474||3631==1475||3631==1476||3631==1482||3631==1483||3631==1484||3631==1486||3631==1487||3631==1488||3631==1489||3631==191||3631==1491||3631==1492||3631==1494||3631==1497||3631==1501||3631==1502||3631==1505||3631==1509||3631==1510||3631==1511||3631==1512||3631==1513||3631==1515||3631==1516||3631==1517||3631==1519||3631==1520||3631==1523||3631==1525||3631==1527||3631==1528||3631==1529||3631==1530||3631==1531||3631==1532||3631==1533||3631==1535||3631==1537||3631==944||3631==1538||3631==1539||3631==1540||3631==1541||3631==1542||3631==1543||3631==1544||3631==1545||3631==1546||3631==1547||3631==1548||3631==1549||3631==1550||3631==1551||3631==1552||3631==1553||3631==1554||3631==1555||3631==1556||3631==1557||3631==1558||3631==1559||3631==1560||3631==1561||3631==1562||3631==1563||3631==1564||3631==1565||3631==1566||3631==1567||3631==1568||3631==1569||3631==1570||3631==1571||3631==1572||3631==1573||3631==1574||3631==1575||3631==1579||3631==1580||3631==1582||3631==1586||3631==1587||3631==1588||3631==1589||3631==1590||3631==1591||3631==1593||3631==1597||3631==1600||3631==1601||3631==1602||3631==1603||3631==1608||3631==1609||3631==1613||3631==1614||3631==1618||3631==1620||3631==1623||3631==1624||3631==1627||3631==1628||3631==1630||3631==1632||3631==1643||3631==1643||3631==1644||3631==1645||3631==1646||3631==1648||3631==1650||3631==1650||3631==1652||3631==1653||3631==1654||3631==1656||3631==1661||3631==1663||3631==1664||3631==1665||3631==1671||3631==1677||3631==1679||3631==1680||3631==1684||3631==1686||3631==1698||3631==1699||3631==1700||3631==869||3631==1703||3631==11613||3631==11664||3631==11533||3631==2880||3631==10308||3631==11685||3631==11661||3631==11687||3631==10398||3631==1812||3631==2051||3631==2047||3631==1917||3631==214||3631==11695||3631==11700||3631==9144||3631==8770||3631==6899||3631==8346||3631==215||3631==217||3631==11419||3631==11705||3631==11706||3631==11707||3631==11708||3631==11709||3631==11710||3631==11711||3631==11712||3631==11713||3631==11419||3631==7494||3631==223||3631==4833||3631==11729||3631==11730||3631==224||3631==11759||3631==11765||3631==225||3631==11798||3631==11799||3631==11800||3631==11801||3631==11802||3631==11803||3631==11804||3631==228||3631==11822||3631==230||3631==8527||3631==232||3631==233||3631==11714||3631==11894||3631==234||3631==11911||3631==11910||3631==11912||3631==11913||3631==11914||3631==11915||3631==11917||3631==11940||3631==237||3631==11960||3631==239||3631==244||3631==248||3631==252||3631==254||3631==12183||3631==258||3631==259||3631==12295||3631==11443||3631==12296||3631==12298||3631==260||3631==5123||3631==170||3631==261||3631==263||3631==12359||3631==2035||3631==264||3631==265||3631==266||3631==271||3631==272||3631==273||3631==279||3631==282||3631==13170||3631==285||3631==286||3631==287||3631==288||3631==269||3631==291||3631==292||3631==293||3631==295||3631==297||3631==299||3631==300||3631==301||3631==303||3631==304||3631==305||3631==307||3631==308||3631==2941||3631==310||3631==311||3631==312||3631==313||3631==315||3631==319||3631==321||3631==322||3631==323||3631==324||3631==326||3631==327||3631==328||3631==339||3631==14362||3631==340||3631==14372||3631==345||3631==346||3631==14545||3631==14546||3631==14547||3631==14548||3631==14549||3631==14550||3631==14551||3631==14552||3631==14553||3631==347||3631==14554||3631==14555||3631==14556||3631==14557||3631==348||3631==349||3631==350||3631==351||3631==352||3631==353||3631==354||3631==355||3631==356||3631==357||3631==359||3631==360||3631==361||3631==71||3631==364||3631==373||3631==374||3631==380||3631==383||3631==384||3631==385||3631==386||3631==171||3631==445||3631==448||3631==449||3631==452||3631==454||3631==458||3631==459||3631==460||3631==461||3631==466||3631==468||3631==469||3631==470||3631==473||3631==477||3631==478||3631==362||3631==388||3631==482||3631==483||3631==485||3631==486||3631==487||3631==489||3631==490||3631==492||3631==493||3631==495||3631==496||3631==497||3631==505||3631==139||3631==507||3631==508||3631==513||3631==522||3631==526||3631==528||3631==529||3631==530||3631==532||3631==533||3631==172||3631==536||3631==538||3631==539||3631==543||3631==544||3631==546||3631==585||3631==587||3631==612||3631==611||3631==616||3631==619||3631==620||3631==621||3631==622||3631==623||3631==624||3631==625||3631==626||3631==627||3631==628||3631==629||3631==630||3631==631||3631==632||3631==633||3631==634||3631==635||3631==636||3631==637||3631==638||3631==639||3631==640||3631==641||3631==642||3631==643||3631==644||3631==645||3631==173||3631==646||3631==647||3631==648||3631==649||3631==650||3631==651||3631==652||3631==653||3631==654||3631==655||3631==656||3631==657||3631==658||3631==659||3631==660||3631==661||3631==662||3631==663||3631==664||3631==665||3631==667||3631==668||3631==669||3631==670||3631==671||3631==672||3631==673||3631==674||3631==675||3631==676||3631==677||3631==678||3631==679||3631==680||3631==681||3631==682||3631==685||3631==687||3631==688||3631==689||3631==690||3631==691||3631==692||3631==693||3631==694||3631==695||3631==696||3631==697||3631==698||3631==699||3631==700||3631==701||3631==702||3631==703||3631==704||3631==705||3631==16109||3631==706||3631==707||3631==708||3631==709||3631==710||3631==711||3631==712||3631==713||3631==714||3631==715||3631==716||3631==717||3631==718||3631==719||3631==720||3631==721||3631==722||3631==724||3631==725||3631==726||3631==727||3631==728||3631==729||3631==730||3631==731||3631==732||3631==733||3631==734||3631==735||3631==736||3631==737||3631==738||3631==739||3631==740||3631==741||3631==742||3631==174||3631==743||3631==744||3631==745||3631==746||3631==747||3631==748||3631==749||3631==750||3631==751||3631==752||3631==753||3631==754||3631==755||3631==756||3631==757||3631==758||3631==759||3631==760||3631==761||3631==762||3631==763||3631==764||3631==765||3631==766||3631==767||3631==768||3631==593||3631==775||3631==778||3631==780||3631==781||3631==783||3631==784||3631==785||3631==786||3631==787||3631==788||3631==789||3631==790||3631==791||3631==792||3631==793||3631==794||3631==795||3631==796||3631==797||3631==798||3631==799||3631==800||3631==801||3631==802||3631==803||3631==804||3631==805||3631==806||3631==807||3631==808||3631==809||3631==810||3631==811||3631==812||3631==813||3631==814||3631==815||3631==816||3631==817||3631==818||3631==819||3631==820||3631==821||3631==822||3631==823||3631==824||3631==825||3631==826||3631==827||3631==828||3631==829||3631==830||3631==831||3631==832||3631==833||3631==834||3631==835||3631==836||3631==837||3631==838||3631==175||3631==839||3631==840||3631==841||3631==842||3631==842||3631==843||3631==844||3631==845||3631==846||3631==534||3631==847||3631==849||3631==778||3631==850||3631==852||3631==858||3631==859||3631==860||3631==861||3631==862||3631==863||3631==865||3631==866||3631==871||3631==872||3631==873||3631==874||3631==875||3631==877||3631==880||3631==883||3631==886||3631==887||3631==888||3631==889||3631==890||3631==896||3631==898||3631==899||3631==902||3631==903||3631==904||3631==906||3631==907||3631==908||3631==909||3631==910||3631==911||3631==912||3631==913||3631==915||3631==916||3631==917||3631==918||3631==919||3631==920||3631==921||3631==922||3631==923||3631==924||3631==925||3631==926||3631==927||3631==928||3631==929||3631==930||3631==931||3631==932||3631==933||3631==934||3631==935||3631==936||3631==937||3631==177||3631==938||3631==939||3631==940||3631==941||3631==942||3631==943||3631==944||3631==945||3631==947||3631==201||3631==948||3631==949||3631==950||3631==951||3631==952||3631==953||3631==954||3631==955||3631==956||3631==957||3631==958||3631==959||3631==960||3631==961||3631==962||3631==963||3631==964||3631==965||3631==966||3631==161||3631==967||3631==968||3631==969||3631==970||3631==971||3631==972||3631==973||3631==974||3631==975||3631==977||3631==978||3631==980||3631==981||3631==986||3631==988||3631==989||3631==990||3631==991||3631==992||3631==994||3631==996||3631==997||3631==998||3631==1002||3631==1009||3631==1010||3631==1011||3631==1016||3631==1024||3631==1025||3631==1026||3631==1028||3631==1029||3631==1030||3631==1037||3631==1038||3631==1039||3631==1040||3631==1041||3631==1043||3631==1044||3631==1046||3631==1047||3631==1049||3631==1051||3631==1052||3631==1054||3631==1063||3631==1066||3631==1070||3631==1071||3631==1072||3631==1073||3631==1075||3631==1077||3631==1078||3631==1080||3631==1081||3631==1079||3631==1082||3631==1083||3631==1084||3631==1085||3631==1086||3631==203||3631==1087||3631==1088||3631==1089||3631==1090||3631==1091||3631==1092||3631==1093||3631==1094||3631==1095||3631==1096||3631==1097||3631==1098||3631==1099||3631==1100||3631==1101||3631==1102||3631==1103||3631==1104||3631==1105||3631==1106||3631==1107||3631==1108||3631==1109||3631==1110||3631==1111||3631==1112||3631==1113||3631==1114||3631==1115||3631==1116||3631==204||3631==1117||3631==1118||3631==1119||3631==1120||3631==1121||3631==1122||3631==1123||3631==1124||3631==1125||3631==205||3631==1126||3631==1127||3631==1128||3631==1129||3631==1130||3631==1131||3631==1132||3631==1133||3631==16397||3631==114702||3631==864)==false){
+		 	showGuide();  //所有单位均提示
+		 }else{//取消提示
+		 	hideGuide();
+		 }
+
+		 		 
+		 if($.cookie("browserLocale") == "zh_CN"){
+		 	$("#language_zh").addClass("cur");
+		 	$("#language_en").removeClass("intro");
+		 }else{
+		 	$("#language_en").addClass("cur");
+		 	$("#language_zh").removeClass("cur");
+		 }
+	}
+	function setLanguage(type){
+	 	if(type  == 'en'){
+	 		$.cookie("browserLocale","en_US");　
+	 	}else{//中文
+	 		$.cookie("browserLocale","zh_CN");　
+	 	}
+	    window.location.reload();
+	 }
+	//setTimeout("startmarquee(34, 100, 0, 'marquee')", 1000); 
+</script>
+<script>
+	$(function(){
+		$(".Greenbtn_1").click(function(){
+		$(".alertbg").show();
+		$(".Picdemo-Pop").show();
+			})
+		$(".Closeme").click(function(){
+		$(".alertbg").hide();
+		$(".Picdemo-Pop").hide();
+			})
+		})
+		
+</script>
+<style>
+	 .show_error{color: red;}
+	 .table_td3{ width:250px;text-align: left;}
+	 
+	.zinfo { width: 475px; padding-top: 40px;display:none;}
+    .zin_scroll {width: 475px; height: 248px; overflow: hidden; overflow-y: auto;}
+    .zin_box { padding-left: 30px; padding-right: 20px; border-left: 1px #ccc solid; }
+    .zin_h { height: 30px; line-height: 30px; font-size: 16px; font-weight: normal; color: #666;}
+    .zin_txt { padding-top: 5px; line-height: 24px; color: #999; font-size: 14px;}
+    
+	.xinfo {padding-left: 0px;width: 490px;padding-top: 40px;}
+	.xin_scroll {padding-left:84px; padding-top: 40px; width: 945px;height: 248px; overflow: hidden; overflow-y: auto;}
+    .xin_box {float: right;}
+    .xin_txt { float: right;text-align: left;display: block;}
+    .zin_wide { width: 1000px;}
+    .zin_narrow { width: 480px;}
+	.zc_input32{height:38px;line-height:38px;margin-right:5px;border:solid 1px #CCC;border-radius:3px;width:120px}
+</style>
+</head>
+<!--onkeydown="keydownSubmit(event)"-->
+<body onload="init()">
+	
+<div class="zcenter" id="body_0x003" style="padding-top:80px;">
+      <h2 class="zl_h2">用户登录</h2>
+      <!--login start-->
+      <div class="fl zlogin1" style="padding-top:0;padding-bottom: 34px;">
+			<style>
+	.pass{
+	   background-image:url(/images/login/pad.gif);
+	}
+	.jAccount{padding-top:20px;}
+	.jAccount a{float:right;font-size:14px;color:#7b9e31;text-decoration:underline;}
+</style>
+<form id="form" name="form" action="/login?refer=http%3A%2F%2Fi.mooc.chaoxing.com" method="post">
+	<input type="hidden" id="refer_0x001" name="refer_0x001" value="http%3A%2F%2Fi.mooc.chaoxing.com">
+	<input type="hidden" id="pid" name="pid" value="-1">
+	<input type="hidden" id="pidName" name="pidName" value="">
+	<input type="hidden" id="fid" name="fid" value="3631">
+	<input type="hidden" id="fidName" name="fidName" value="承德石油高等专科学校图书馆">
+	<input type="hidden" name="allowJoin" value="0">
+	<input type="hidden" name="isCheckNumCode" value="1">
+	<input type="hidden" name="f" value="0">
+	<input type="hidden" name="productid" id="productid" value="">
+	<input type="hidden" name="t" id="t" value="true"> 
+<table class="zlogin">
+	  <tbody><tr>
+         <td class="zl_name">&nbsp;</td>
+		 <td class="show_error" id="show_error">&nbsp;</td>
+		 <td>&nbsp;</td>
+      </tr>
+	  
+	  <tr>
+	  <td class="zl_name table_td1">&nbsp;</td>
+      <td class="table_td2">
+			<div id="schoolName" style="font-size: 16px;padding-top:5px;padding-bottom: 10px;padding-left: 0px;padding-right: 0px;">
+			<div class="choose_school_div">
+			  			   <span id="schoolName2">
+				   承德石油高等专科学校图书馆
+			   </span>
+			   			   
+    						    			</div>
+			</div>
+	   </td>
+	   <td></td>
+      </tr>
+      
+	  <tr>
+        <td class="zl_name table_name">
+        	<div style="display:none;" id="holdertext">手机号/账号        	</div>
+		</td>
+        <td class="table_td2">
+			<input class="zl_input" type="text" name="uname" id="unameId" value="" onfocus="hideHolder();" onblur="showHolder();" placeholder="手机号/账号        	"></td>
+        <td>&nbsp;</td>
+      </tr>
+	  <script>
+	  var holderText = $("#holdertext").html();
+	   $("#unameId").attr("placeholder",holderText);
+	  function hideHolder(){
+	  	$("#unameId").removeAttr("placeholder");
+	  }
+	  function showHolder(){
+	    $("#unameId").attr("placeholder",holderText);
+	  }
+	  
+	  </script>
+      <tr class="zl_tr_top18">
+        <td class="zl_name table_psw">
+			<span class="table_p_abs" onclick="hidePwdInput()" id="pwdNoteId1" style="font-size:14px;font-family:'微软雅黑';top:27px;">
+						密码</span>
+					</td>
+        <td class="table_td2 table_psw">
+			<input autocomplete="off" class="zl_input2" style="font-size:14px;font-family:'微软雅黑'" type="password" name="password" id="passwordId" value="" onfocus="hidePwdError()" onkeydown="keydownSubmit(event)" onclick="hidePwdInput()" onblur="showPwdInput()" onpropertychange="hideError('pwdNoteId1')" oninput="hideError('pwdNoteId1')" ;="">
+		    <span class="zl_t_abs" id="pwdNoteId2">
+				<a href="/pwd/getpwd?fid=3631" style="font-size:14px;top:29px;">忘记密码?</a>
+			</span>	
+			<span id="pass" class="pass" name="pass" style="display:none">大小写锁定已打开</span>
+		</td>
+        
+        <td>
+		</td>
+      </tr>
+	   <!--vercode-->
+	  	 <tr class="zl_tr_top18" id="numVerCode_tr">
+		<td class="zl_name table_name"></td>
+        <td class="zl_name table_nvc" style="padding-left:0;padding-right:0;">
+			<div style="height:45px;">
+				<input style="color:#999;padding:0 4px;margin-right:20px;width:196px;" class="zc_input32 fl" name="numcode" id="numcode" type="text" value="请输入右边的四位数字" onkeydown="keydownSubmit(event)" onfocus="if(this.value='请输入右边的四位数字'){this.value=''}" onblur="if(this.value==''){this.value='请输入右边的四位数字'}">
+				<span onclick="getNumCode();" class="fr">
+    				<img src="img/code (1).jpg" width="100" height="40" id="numVerCode" style="border:solid 1px #CCC;border-radius:4px;">
+				</span>
+				
+			</div>
+					</td>
+		<td><a href="javascript:void(0);" onclick="getNumCode();" class="fl" style="color:#2ca4de;line-height:40px;font-size:12px;padding-left:6px;">看不清</a></td>
+      </tr>	  
+	   <tr class="zl_tr_top18_3 zl_tr_td_hide" id="verCode_tr">
+        <td class="zl_name table_name">&nbsp;</td>
+        <td class="table_td_code table_td2">
+			<input type="text" class="zl_input_code" id="verCode" name="verCode" onfocus="setEmpty('show_error')" onkeydown="keydownSubmit(event)">
+			<a href="javascript:void(0);" onclick="getVarCode();">
+				<img src="img/code.jpg" width="123" height="40" id="imgVerCode">
+			</a>
+		    <a href="javascript:void(0);" onclick="getVarCode();">换一张</a>
+		</td>	
+        <td>&nbsp;</td>
+      </tr>
+	  
+	   <tr class="zl_tr_top18_2">
+        <td>&nbsp;</td>
+        <td>
+		   <label class="zl_btn">
+            <input class="zl_btn_right" type="button" value="登录" onclick="mysubmit('form')">
+           </label>
+                      		</td>
+        <td class="zl_prompt zblue" style=" width:100px; text-align: left; font-size:18px;padding-top: 38px;">
+							<a href="/enroll?refer=http%3A%2F%2Fi.mooc.chaoxing.com&amp;fid=3631&amp;role=16" id="joinUserA" style="display: none;">注册</a>
+					</td>
+      </tr>
+	  
+	  <tr style="display: none;" id="third_login_id">
+	  	<td>&nbsp;</td>
+	  	<td><p class="zl_third-party" id="third_login_id" style="padding-top:12px;">
+    <span class="zl_t_name" style="font-size:16px;color:#999;">其它登录方式:</span>
+    <span class="zl_t_qq"><a href="javaScript:void(0)" onclick="to_third_login('http%3A%2F%2Fi.mooc.chaoxing.com')"></a></span>
+   
+    <span class="zl_t_weixin"><a href="javaScript:void(0)" onclick="to_third_login_weixin('http%3A%2F%2Fi.mooc.chaoxing.com')"></a></span>
+	 <!--
+    <span class="zl_t_baidu"><a href="#"></a></span>
+    -->
+</p>
+<script type="text/javascript" src="/js/common/third_login.js"></script></td>
+	  	<td>&nbsp;</td>
+	  </tr>
+	  	  								               							<tr><td>&nbsp;</td>
+	  </tr>
+	  
+    </tbody></table>
+     
+</form>
+       </div>
+      <div class="fr zinfo" id="notice_box_0x003" style="display: block;">
+    		<link href="/css/common/qrlogin.css" rel="stylesheet" type="text/css">
+
+<div class="Rmain-cont">
+	<dl class="Ewm-dl" style="position:relative;left:19px;padding-top: 34px;">
+		 <dt><img src="img/ewm.png" height="218" width="218"></dt>	</dl>
+		<p style="width:163px;height:54px;position:relative;left:50px;top:50px;color:#353535;font-size:16px;">扫一扫下载移动客户端</p>
+	</div>
+      </div>
+      <div class="clear"></div>
+	  	  <div id="newNotice" style="display:none;" font-size:16px;line-height:80px;"=""><h2 class="zl_h2" style="margin-left:65px">通知</h2><br>
+		<font style="font-size:16px;">		
+		<b id="word" style="">
+		</b>
+        </font>
+	  </div>
+ </div>
+ <!--school-->
+ <div class="bgdialog" id="bgdialog1"></div>
+<div class="zcenter">
+  <!--window1 start-->
+  <div class="dialog" id="dialog1">
+  <div class="zwindow">
+<div class="zw_top">
+  <ul>
+    <li class="zw_t_name">选择单位</li>
+    <li class="zw_t_search">
+      <input class="zw_t_input" name="" type="text" onkeydown="keydownSearch(event,'searchSchool1')" id="searchSchool1">
+      <input class="zw_t_btn" type="submit" value="" onclick="searchSchool('searchSchool1');">
+      <div class="clear"></div>
+    </li>
+    <li class="zw_t_close" onclick="closeSchool('dialog1');"></li>
+    <div class="clear"></div>
+  </ul>
+</div>
+<div>
+  <div class="zw_sidebar">
+    <!--城市 -->
+    <ul class="zw_s_ul" id="cities">
+          </ul>
+  </div>
+  <div class="zw_main">
+    <div class="zw_m_box">
+      <div class="zw_m_top">
+        <ul id="letters">
+          <!-- 机构首字母 -->
+          <li class="zw_m_t_li"><span class="zw_m_t_span">
+          <a href="javascript:void(0);" onclick="selectLetter(this)" id="all">全部</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="A">A</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="B">B</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="C">C</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="D">D</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="E">E</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="F">F</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="G">G</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="H">H</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="I">I</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="J">J</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="K">K</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="L">L</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="M">M</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="N">N</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="O">O</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="P">P</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="Q">Q</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="R">R</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="S">S</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="T">T</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="U">U</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="V">V</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="W">W</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="X">X</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="Y">Y</a></span></li>
+          <li class="zw_m_t_li"><span><a href="javascript:void(0);" onclick="selectLetter(this)" id="Z">Z</a></span></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="zw_m_bottom" id="custombar">
+        <!-- 机构  -->
+        <ul class="zw_m_content" id="forms">
+		  <div class="clear"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+  <!--window1 end-->
+
+  <!--window2 start-->
+  <div class="dialog" id="dialog2">
+  <div class="zwindow">
+<div class="zw_top">
+  <ul>
+    <li class="zw_t_name">选择学校</li>
+    <li class="zw_t_search">
+      <input class="zw_t_input" name="" type="text" value="" onkeydown="keydownSearch(event,'searchSchool2')" id="searchSchool2">
+      <input class="zw_t_btn" type="submit" value="" onclick="searchSchool('searchSchool2');">
+      <div class="clear"></div>
+    </li>
+    <li class="zw_t_close" onclick="closeSchool('dialog2');"></li>
+    <div class="clear"></div>
+  </ul>
+</div>
+<div class="zw_result">
+  <p class="zw_r_top"><a href="javascript:void(0);" onclick="searchReturn()">返回</a></p>
+  <div class="zw_m_bottom2">
+  <ul id="searchForms">
+    <div class="clear"></div>
+  </ul>
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+ <!--window2 end-->
+ 
+ <script type="text/javascript">
+function shouhui(e,str) {
+    document.getElementById('mouse_tooltip_0x001').innerHTML=str;
+	document.getElementById('mouse_tooltip_0x001').style.top=(5+e.clientY-document.body.scrollTop+document.documentElement.scrollTop)+"px";
+	document.getElementById('mouse_tooltip_0x001').style.left=(3+e.clientX)+"px";
+	document.getElementById('mouse_tooltip_0x001').style.display='block';
+}
+function fangzou(e) {
+    document.getElementById('mouse_tooltip_0x001').innerHTML="";
+    document.getElementById('mouse_tooltip_0x001').style.display="none";
+}
+</script>
+<style type="text/css">
+#mouse_tooltip_0x001{ 
+	background-color: #f0f0f0;
+	min-width:150px; 
+	height:30px;
+	line-height: 30px; 
+	padding: 5px;
+	position:absolute;
+	display:none;
+	border-radius: 3px;
+	z-index:1000000;
+}
+</style>
+<div id="mouse_tooltip_0x001"></div>
+  <script type="text/javascript" src="/js/common/login_school.js"></script>
+ <!--kefu -->
+ <div style="position:absolute;bottom: 0px;padding:10px;left:0px;">
+	 </div>
+ <!--notice-->
+ <style type="text/css">
+#div_notice{position:absolute; top:0px; left:0px; width:100%;height:50px;line-height: 50px; background:yellow;display: none;}
+#div_notice_text{text-align: center;font-size: 18px;color: red;}
+</style>
+<div id="div_notice">
+    <div id="div_notice_text"></div>
+</div>
+ <script type="text/javascript">
+  
+  function  filter_notice(fid){
+  		if(1581==fid){
+		      $("#div_notice_text").html('特别提示：请内蒙古赤峰学院的同学用 "A+学号"(如Axxx) 作为账号登录，谢谢合作！');
+			  $("#div_notice").show();
+		}else if(1630==fid){
+			  $("#div_notice_text").html('特别提示：请南阳师范学院的同学用 "z+学号"(如zxxx) 作为账号登录，谢谢合作！');
+		      $("#div_notice").show();
+		}else if(1639==fid){
+		 	  $("#div_notice_text").html('特别提示：此学院坞城校区学生登陆时学号前面需要加数字0 其它校区不需要加数字0');
+		      $("#div_notice").show();
+		}else if(1661==fid){
+		      $("#div_notice_text").html('特别提示：请宁波工程学院的同学用 "s+学号"(如sxxx) 作为账号登录，谢谢合作！');
+		      $("#div_notice").show();
+		}else if(1606==fid || 2025==fid || 2073==fid || 1588 ==fid || 1606==fid || 878 ==fid || 11766==fid){
+		      $("#div_notice_text").html('特别提示： 学号为11位的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(1694==fid || 2125==fid || 183==fid || 1748==fid || 1267==fid || 10749==fid){
+		 	  $("#div_notice_text").html('通知：由于本校学号为11位纯数字，与手机号码冲突，麻烦各位同学在登录时学号前面加小写字母“s”，辛苦各位同学。同学们在任何时间段都可以在线学习。');
+			  $("#div_notice").show();
+		}else if(1254==fid){
+			  $("#div_notice_text").html('特别提示： 请河北医科大学的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(1192==fid){
+			  $("#div_notice_text").html('特别提示： 请广东科贸职业学院的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(8523==fid){
+			  $("#div_notice_text").html('特别提示： 请伊犁师范学院的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(1491==fid){
+			  $("#div_notice_text").html('特别提示： 请九江学院的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(13472==fid){
+			  $("#div_notice_text").html('特别提示： 学号是11位数字，并且是1开头，登陆时需要加小写s ，学号不是11位数字的不需要加');
+		      $("#div_notice").show();		      
+		}else if(13491==fid){
+			  $("#div_notice_text").html('特别提示： 学号是11位数字，并且是1开头，登陆时需要加小写s ，学号不是11位数字的不需要加');
+		      $("#div_notice").show();		      
+		}else if(13496==fid){
+			  $("#div_notice_text").html('特别提示： 学号是11位数字，并且是1开头，登陆时需要加小写s ，学号不是11位数字的不需要加');
+		      $("#div_notice").show();		      
+		}else if(13659==fid){
+			  $("#div_notice_text").html('特别提示： 请黔东南民族职业技术学院夏令营的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();		      
+		}else if(13673==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(13133==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(13148==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(13895==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(14046==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(14345==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(1606==fid){
+			  $("#div_notice_text").html('特别提示： 请廊坊师范学院的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();
+		}else if(14286==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else if(1581==fid){
+			  $("#div_notice_text").html('特别提示： 请赤峰学院的用户，登录时请在学号前加 s');
+		      $("#div_notice").show();		      
+		}else if(13113==fid){
+			  $("#div_notice_text").html('特别提示： 学号11位数字，并且是1开头，登陆时需要学号前面加小写s');
+		      $("#div_notice").show();		      
+		}else{
+			 $("#div_notice").hide();
+		}
+  }
+ </script> <!--弹窗-->
+ <div class="alertbg"></div>
+ <div class="Picdemo-Pop">
+	<div class="Picimg">
+	<img src="images/guide/tcpic.png">
+			<a href="javascript:;" class="Closeme"><img src="images/guide/close.png"></a>
+	</div>
+ </div>
+
+
+</body></html>

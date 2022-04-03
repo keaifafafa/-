@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>同名函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 类似方法的重载，但是处理机制不同 */
+			function test(x) {
+				document.write('result1 = ' + x);
+			}
+			function test(x,y) {
+				document.write('result2 = ' + x + y);
+			}
+			function test(x,y,z) {
+				document.write('result3 = ' + x + y +z);
+			}
+			// 永远调用后定义的同名函数
+			test(4);
+		</script>
+	</body>
+</html>

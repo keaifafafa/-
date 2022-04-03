@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>边框图片</title>
+		<style>
+			div{
+				/* 
+				第一句话很重要，相当于可不可见的作用 必须加
+				transparent:透明的
+				*/
+				border: 1px solid transparent;
+				margin: 100px;
+				width: 300px;
+				height: 300px;
+				/* 背景图片 */
+				background-image: url(img/bg2.jpeg);
+				/* 图片路径 */
+				border-image-source: url(img/border.png);
+				/* 
+				边框背景图的分割方式 
+				number: 数字表示图像的像素（位图图像）或向量的坐标（如果图像是矢量图像）
+				%: 百分比图像的大小是相对的：水平偏移图像的宽度，垂直偏移图像的高度
+				fill: 保留图像的中间部分
+				*/
+				border-image-slice: 27 fill;
+				/* 设置图片边框的宽度 */
+				border-image-width: 25px;
+				/* 
+				设置边框图像区域超出边框的量 
+				会向外扩大！
+				*/
+				border-image-outset: 0px;
+				/* 
+				设置图像是否平铺（repeat） 铺满（round） 拉伸（stretch）
+				 repeat会出现半个的情况，round就不会
+				*/
+				border-image-repeat: stretch;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

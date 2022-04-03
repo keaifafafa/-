@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>相对定位</title>
+		<style>
+			/*设定初始值*/
+			body{
+				margin: 50px;
+			}
+			div{
+				/*外边距*/
+				margin: 10px;
+				/*内边距*/
+				padding: 5px;
+				/*字体大小*/
+				font-size: 18px;
+				/*行内高度*/
+				line-height: 25px;
+			}
+			#father{
+				margin: 0;
+				/*边框的设置*/
+				border: 1px solid #008000;
+				/*不设置 width 和 height 的话 会正好能够装下全部元素*/
+				/*width: 500px;
+				height: 500px;*/
+			}
+			
+			.div1{
+				background-color: orangered;
+				border: 1px solid #008099;
+				/*相对定位*/
+				position: relative;
+				/*相对向上20px*/
+				top: -20px;
+			}
+			.div2{
+				background-color:deeppink;
+				border: 1px solid #998000;
+				position: relative;
+				left: -30px;
+			}
+			.div3{
+				background-color:greenyellow;
+				border: 1px solid #008990;
+				/*相对定位*/
+				position: relative;
+				/*相对向上20px*/
+				top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="father">
+			<div class="div1">第一个盒子</div>
+			<div class="div2">第二个盒子</div>
+			<div class="div3">第三个盒子</div>
+		</div>
+	</body>
+</html>

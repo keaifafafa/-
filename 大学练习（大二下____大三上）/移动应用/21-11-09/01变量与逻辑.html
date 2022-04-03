@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变量与逻辑</title>
+	</head>
+	<!-- 
+		在HTML body部分中的JavaScripts会在页面加载的时候被执行。
+		在HTML head部分中的JavaScripts会在被调用的时候才执行。 
+	-->
+	<!-- 放后面会一直刷新 -->
+	<script>
+		// 注意命名，可用的特殊符号，只有 $ 和 _
+		let name = 'okk';
+		alert(name);
+	</script>
+	<body>
+		<div></div>
+	</body>
+	<!-- 放在这里会被自动执行 -->
+	<script>
+		// 非法的写法
+		// let name%8 = "xxx";
+		// console.log(name%8);
+		
+		// 数字加减运算
+		let a = 10;
+		a -= 5;
+		document.write(a);
+		
+		// 逻辑判断
+		console.log(name === a); // false
+		console.log(!(name === a)); // true
+		
+		// 三元运算符
+		let score = 59;
+		alert(score>60 ? '成绩合格':'成绩不合格');
+	</script>
+</html>

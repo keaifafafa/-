@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>interator迭代器</title>
+	</head>
+	<body>
+		
+		<script>
+			'use strict';
+			//interator迭代器是 ES6新特性
+			//Set和Map只能通过这种方式进行遍历
+			let map = new Map([['Alna',100],['Bob',90],['Luccy',80]]);
+			for(let i of map){
+				console.log(i);
+			}
+			
+			let set = new Set([7,7,8,8,9,1,1]);
+			for(let i of set){
+				console.log(i);
+			}
+		</script>
+	</body>
+</html>

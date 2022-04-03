@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String对象01</title>
+	</head>
+	<body>
+		<script>
+			let str = new String('HelloWorld');
+			/**
+			 * slice函数  从下标为2的开始截取到下标为5的；
+			 * **/ 
+			console.log(str.slice(2,6));
+			console.log(str.substring(2,6));
+			/**
+			 * slice的特殊点 在于取负数的时候 
+			 * 第一个参数对应的字符必须在第二个参数的前面
+			 * 这里的负数代表从后往前数！
+			 * substring就没有这个特性
+			 * **/ 
+			console.log(str.slice(-3,-1));/* 倒数第三个到倒数第二个 */
+			/**
+			 * substr(start,length)
+			 * start = 起始位置（下标） length = 截取长度
+			 */
+			console.log(str.substr(2,3));
+			console.log(str.substr(1));
+			console.log(str.substr(-5,3));
+			console.log(str.substr(-5,100));
+		</script>
+	</body>
+</html>

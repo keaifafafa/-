@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>背景</title>
+		<style type="text/css">
+			div{
+				padding: 50px;
+				/* 一定要设置 边框 和 宽、高 */
+				border: 10px solid red;
+				width: 600px;
+				height: 600px;
+				background-image: url(img/face.gif);
+				background-repeat: repeat;
+				background-position: left top;
+				/* 设置背景图像是否固定或者是随页面的其余部分滚动  默认是scroll*/
+				background-attachment:scroll;
+				/* 
+				规定背景图的尺寸 
+				第一个值设置宽度，第二个值设置高度，只设置第一个值，第二个默认auto
+				cover
+				contain
+				*/
+				/* background-size: cover; */
+				
+				/* 
+				背景原点属性
+				和 background-position 配合使用
+				 */
+				background-origin: content-box;
+				/* 规定背景的绘制区域 */
+				background-clip: content-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>for循环</title>
+		<script>
+			let i,j;
+			for(i = 0; i < 10; i++){
+				console.log('value = ' + (i + 1));
+				// 利用 字符串 拼接 实现换行（br）
+				document.write('value = ' + (i + 1) + '<br/>');
+			}
+			for(j = 10; j > 0; j--){
+				if(j % 2 == 0){
+					document.write('灯亮了！ ' + j + '<br/>');
+				}else{
+					document.write('灯灭了！ ' + j + '<br/>');
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

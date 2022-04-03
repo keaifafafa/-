@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>id选择器</title>
+		<!--id选择器
+			#id名称{}
+			注意：不可以复用（全局唯一的思想）
+			优先级(不遵循就近原则)：id > 类  > 标签
+		-->
+		<style>
+			#Id{
+				color: purple;
+			}
+			.Class{
+				color: yellow;
+			}
+			/*由于 id选择器优先级最高，
+			 * 所以此时标签浏览器的修改无效
+			 */
+			p{
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1 id="Id">标题1</h1>
+		<h1 id="Id">标题12/h1>
+		<h1 class="Class">标题2</h1>
+		<h1>标题3</h1>
+		
+		<p id="Id">我是段落</p>
+	</body>
+</html>

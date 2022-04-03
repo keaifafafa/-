@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>内容分发</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<todo>
+				<todo-title slot="todo-title" v-bind:title="title"></todo-title>
+				<todo-items slot="todo-items" v-for="item in todoItems" v-bind:item="item"></todo-items>
+			</todo>
+		</div>
+
+	</body>
+	<script src="./js/vue.js"></script>
+	<script>
+		Vue.component("todo", {
+			template: '<div>\
+						<slot name="todo-title"></slot>\
+						<ul>\
+							<slot name="todo-items"></slot>\
+						</ul>\
+					</div>'
+		});
+
+		Vue.component("todo-title", {
+			props: ['title'],
+			template: "<div>{{title}}</div>"
+		});
+
+		Vue.component("todo-items", {
+			props: ['item'],
+			template: "<li>{{item}
+			}</li>"
+		});
+
+		//实例化Vue并且初始化数据
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				title: "秦老师系列课程",
+				todoItems: ["test1", "test2", "test3"]
+			}
+		});
+	</script>
+
+</html>

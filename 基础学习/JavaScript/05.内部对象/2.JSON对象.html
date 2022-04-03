@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON</title>
+	</head>
+	<body>
+		<script>
+			var user = {
+				name:"可爱发",
+				age:21,
+				sex:'boy'
+			}
+			//将对象转化为json字符串"{"name":"可爱发","age":21,"sex":"boy"}"
+			var jsonUser = JSON.stringify(user);
+			
+			//将json字符串转化为对象
+			var newJson = JSON.parse('{"name":"可爱发","age":21,"sex":"boy"}');  //里面填写的是字符串  最外面还必须是单引号
+		</script>
+	</body>
+</html>

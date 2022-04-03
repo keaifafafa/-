@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				border: 2px solid red;
+				background-color: #FF0000;
+				/* 过渡的持续时间 */
+				transition-duration: 3s ;
+				/* 过渡延迟时间 */
+				/* transition-delay: 2s; */
+				/* 
+				 *   过渡时间函数 
+				 *   linear:匀速  ease:慢快慢  
+				 * 	 ease-in:慢快 ease-out: 快慢
+				 *   ease-in-out:慢快慢 有区别于ease 
+				*/
+				transition-timing-function: linear; 
+				/**
+				 * 设置指定属性过渡渐变
+				 * all:全部属性
+				 * width：只有宽度
+				 * height：只有高度
+				 * background-color：背景颜色
+				 */
+				transition-property:background-color;
+				/* 复合属性单行设置 */
+				transition: 3s 0.1s ease-in width, 4s 0.2s ease-out height, 5s 0.5s linear; background-color: ;
+			}
+			div:hover{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

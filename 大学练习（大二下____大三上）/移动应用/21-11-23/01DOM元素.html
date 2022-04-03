@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<p id="p1" class="A" title="嘿嘿">这是一个段落1</p>
+			<p id="p2" class="A">这是一个段落2</p>
+			<p id="p3" class="A">这是一个段落3</p>
+			<!-- 图像 -->
+			<img src="img/1.jpg" width="1200px" height="800px"/>
+		</div>
+		<script type="text/javascript">
+			/* 
+			 * 更改段落内容
+			 * 要注意标签和类不唯一，所以要加下标 
+			 * */
+			let obj = document.getElementsByTagName('p');
+			// document.getElementsByClassName();
+			console.log(obj[0]);
+			// 更改段落内容
+			obj[0].innerHTML = '已经修改过的段落';
+			console.log(obj[0]);
+			
+			let obj2 = document.getElementById('p1');
+			console.log(obj2);
+			
+			/* 
+			 * 更改元素属性 
+			 * */
+			let obj3 = document.getElementsByTagName('p');
+			obj3[0].title = "呵呵";
+			
+			/**
+			 * 更改图片路径
+			 */
+			let obj4 = document.getElementsByTagName('img');
+			obj4[0].src = 'img/2.jpg';
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简易三级联动</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+			#context {
+				width: 100%;
+			}
+
+			#context div {
+				border: 1px solid #00FFFF;
+				background-color: #00FFFF;
+				width: 800px;
+				height: 200px;
+				line-height: 200px;
+				margin: 50px auto;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="context">
+			<div>
+				省<select name="province" id="province">
+					<option disabled="disabled" selected="selected">-请选择-</option>
+				</select>
+				市<select name="city" id="city"></select>
+				区<select name="area" id="area"></select>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		// 省份
+		let province = document.getElementById('province');
+		// 城市
+		let city = document.getElementById('city');
+		// 地区
+		let area = document.getElementById('area');
+		// 定义三维数组，存储数据
+		let P = ['黑龙江省', '河北省'];
+		let C = [
+			['哈尔滨市', '齐齐哈尔', '漠河'],
+			['承德', '石家庄', '秦皇岛', '保定']
+		];
+		let A = [
+			[
+				['哈1', '哈2', '哈3'],
+				['齐1', '齐2', '齐3'],
+				['漠1', '漠2', '漠3']
+			],
+			[
+				['承1', '承2', '承3'],
+				['石1', '石2', '石3'],
+				['秦1', '秦2', '秦3'],
+				['保1', '保2', '保3']
+			]
+		];
+		/* 创建option的函数 */
+		function createOption(obj, data) {
+			for (let i in data) {
+				// data[i] 取下标  创建option一定要有value，即下标
+				let option = new Option(data[i], i);
+				// 把创建的option添加进去
+				obj.options.add(option);
+			}
+		}
+		
+		/* 省份创建 */
+		createOption(province, P);
+		
+		/* 当省份变化时，给市的select添加options */
+		province.onchange = function() {
+			// 首先清空city的option 防止多次变化时，数据未还原
+			city.options.length = 0;
+			// 递归调用
+			console.log(province.value);
+			createOption(city, C[province.value]);
+			// 如果省已经改变了 
+			if(province.value >= 0){
+				// 这里城市改变同时会影响区的改变
+				city.onchange();
+			}
+		}
+		
+		/* 当城市发生变化时 给区的select添加options */
+		city.onchange = function() {
+			area.options.length = 0;
+			console.log(city.value);
+			// 要将省和区的下标全部传进来
+			createOption(area, A[province.value][city.value]);
+		}
+	</script>
+</html>

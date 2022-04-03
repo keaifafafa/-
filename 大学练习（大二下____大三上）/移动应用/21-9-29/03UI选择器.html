@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* input焦点 */
+			input:focus{
+				background-color: #FF0000;
+			}
+			/* 文本选择 */
+			p::selection{
+				background-color: #008000;
+			}
+			/* 禁止状态 */
+			textarea:disabled{
+				background-color: #FF1493;
+			}
+			/* 可用状态 */
+			textarea:enabled{
+				background-color: #FFFF00;
+			}
+			/* 仅读 */
+			textarea:read-only{
+				background-color: #00FFFF;
+			}
+			/* 可读可写 */
+			textarea:read-write{
+				background-color: black;
+			}
+			/* 文本前 */
+			p::before{
+				content: "这是";
+				background-color: #FFFF00;
+			}
+			/* 文本后 */
+			p::after{
+				content: url(./img/1.jpg);
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background: ;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text"/>
+		<p>这是一个文本</p>
+		<textarea disabled="disabled">
+			这是一个文本域，可以写很多很多的东西
+		</textarea>
+	</body>
+</html>

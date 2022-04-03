@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>可变参数函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+			/** 函数定义 **/   
+			// 这里的参数不用填（因为是可变的）
+			function aaa(){
+				let z = 0;
+				// arguments是当前函数的所有参数组成的数组
+				for(let i = 0; i < arguments.length; i++){
+					z += arguments[i];
+				}
+				return z;
+			}
+			
+			/** 函数调用 **/ 
+			console.log(aaa(3));
+			console.log(aaa(3,7));
+			console.log(aaa(8,5,7));
+			console.log(aaa(8,5,7,' fafa ','hello world'));
+		</script>
+	</body>
+</html>

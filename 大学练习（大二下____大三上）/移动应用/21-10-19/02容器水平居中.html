@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>容器水平居中</title>
+		<style>
+		/* 
+		思路：
+			两个容器（div）的嵌套，一个父亲，一个儿子
+			文本水平居中可以用 text-align: center;
+			但是容器（div）水平居中就需要用到 margin: 0 auto;
+			tips: 记得设置父元素和子元素的宽和高！
+		 */
+			#father{
+				/* 水平居中 */
+				margin: 0 auto;
+				width: 600px;
+				height: 600px;
+				
+				border: 2px solid red;
+				/* text-align: center; */
+			}
+			#son{
+				/* 水平居中 */
+				margin: 150px auto;
+				width: 300px;
+				height: 300px;
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="father">
+			<div id="son"></div>
+		</div>
+	</body>
+</html>

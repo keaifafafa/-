@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<!-- 测试 v-if -->
+		<div id="app">
+			<input type="checkbox" v-model="flag" />
+			<p v-if="flag">已选中</p>
+			<p v-else>未选中</p>
+		</div>
+
+		<!-- 测试 v-if-else -->
+		<div id="app1">
+			<p v-if=" type === 'A' ">A</p>
+			<p v-else-if=" type === 'B' ">B</p>
+			<p v-else-if=" type === 'C' ">C</p>
+			<p v-else>D</p>
+		</div>
+
+		<!-- 测试v-for -->
+		<div id="app2">
+			<li v-for="(item,index) in items">
+				{{item.message}} --- {{index + 1}}
+			</li>
+		</div>
+
+	</body>
+	<script src="./js/vue.js"></script>
+	<!-- 编写js -->
+	<script>
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				// 这是一个boolean类型变量
+				flag: false
+			}
+		});
+
+		var vm1 = new Vue({
+			el: "#app1",
+			data: {
+				type: "C"
+			}
+		});
+
+		var vm2 = new Vue({
+			el: "#app2",
+			/* Model:数据 */
+			data: {
+				items: [
+					{
+						message: "Java"
+					},
+					{
+						message: "Python"
+					},
+					{
+						message: "C++"
+					}
+				]
+			}
+		});
+	</script>
+
+</html>

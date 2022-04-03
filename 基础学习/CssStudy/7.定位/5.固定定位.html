@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>固定定位</title>
+		<style>
+			
+			body{
+				height: 1000px;
+			}
+			/*绝对定位 是相对于浏览器的 默认状态下*/
+			div:nth-of-type(1){
+				width:100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+			/*固定定位*/
+			div:nth-of-type(2){
+				width:50px;
+				height: 50px;
+				background: deeppink;
+				position: fixed;
+				right: 0;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<div>div1</div>
+		<div>div2</div>
+		
+	</body>
+</html>

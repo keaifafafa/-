@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圆角边框</title>
+		<style>
+			
+			/*圆形*/
+			.div1{
+				width:100px;
+				height: 100px;
+				border:5px solid deeppink;
+				/*圆角边框  border-radius: 左上 右上 右下 左下  顺时针方向
+				 超过100px就不会再有反应了*/
+				border-radius: 100px;
+				/*居中*/
+				margin: auto auto;
+				/*padding: auto auto;*/
+			
+			}
+			/*半圆形*/	
+			.div2{
+				width:100px;
+				height: 50px;
+				border:5px solid deeppink;
+				border-radius: 100px 100px 0 0;
+				margin: auto auto;
+			}
+			/*将图片设置为圆形头像*/
+			img{
+				border:1px solid deeppink;
+				border-radius: 32px;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<div class="div1"></div>
+		<hr size="5px" color="#006400"/>
+		<div class="div2"></div>
+		<hr size="5px" color="#006400"/>
+		<!--
+			有时候 margin: auto auto; 没效果   
+			但是 align="center"肯定有效
+		-->
+		<div class="div3" align="center">
+			<img src="../4.高级选择器/img/QQ.png"/>
+		</div>
+	</body>
+</html>

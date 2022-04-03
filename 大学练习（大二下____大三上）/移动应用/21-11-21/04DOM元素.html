@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM元素</title>
+		
+	</head>
+	<body>
+		<div>
+			<p id="p1" class="p1">这是一个段落</p>
+		</div>
+		
+		<script>
+			/* 
+			* inner属于标签内的内容，不加inner就会连标签一起获取 
+			*/
+			let a = document.getElementById('p1');
+			console.log(a.innerText);
+			console.log(a.innerHTML);
+			/* 
+			 * 通过标签获取元素
+			 * 获取的是一个数组，因为不唯一(所以需要加下标)
+			 */
+			let b = document.getElementsByTagName('p');
+			console.log(b[0].innerHTML);
+			console.log(b[0].innerText);
+			/*
+			 * 通过标签获取元素
+			 * 获取的是一个数组，因为不唯一(所以需要加下标)
+			 */
+			let c = document.getElementsByTagName('p');
+			console.log(c[0].innerHTML);
+			console.log(c[0].innerText);
+		</script>
+	</body>
+</html>

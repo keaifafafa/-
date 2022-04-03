@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实验9-1</title>
+		<style>
+			#wrap {
+				width: 900px;
+				margin: 0 auto;
+				border: 2px solid red;
+				margin-top: 5px;
+			}
+			div{
+				text-align: center;
+			}
+			#pic{
+				width:420px;
+				height: 300px;
+				background: url(./img/1.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				float:left;
+				background-color: #77A;
+				
+			}
+			#text{
+				background: url(./img/1.jpg);
+				float: right;
+				width: 420px;
+				height: 500px;
+				background-color: #77A;
+				padding: 10px;
+				font-weight: bold;
+			}
+			#title{
+				font-size: 32px;
+				font-family: "华文彩云";
+			}
+			#author{
+				font-size: 12px;
+				font-family: "黑体";
+				text-align: right;
+				margin-bottom: 24px;
+			}
+			p{
+				font-family: "隶书";
+				font-size: 24px;
+				margin: 2px;
+				/*字符间距
+				 word-spacing 属性增加或减少单词间的空白（即字间隔）。
+				  letter-spacing 属性增加或减少字符间的空白（字符间距）。
+				  word-spacing意思是设置单词间的间距，如何区别是不是为一个单词呢，
+				  这里我们可以看出 用空格隔开的为一个单词，所以在执行word-spacing:10px;
+				  执行的前后可以发现，执行后空格变得更大了！！
+				 * */
+				letter-spacing: 0.5em;
+				line-height: 1.5em;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="pic"></div>
+			<div id="text">
+				<div id="title">
+					木兰花令.拟古决绝词
+				</div>
+				<div id="author">
+					纳兰性德
+				</div>
+				<div id="content">
+					<p>人生若只如初见</p>
+					<p>何事秋风悲画扇</p>
+					<p>等闲变却故人心</p>
+					<p>却道故人心易变</p>
+					<p>骊山语罢清宵半</p>
+					<p>泪雨零铃终不怨</p>
+					<p>何如薄幸锦衣郎</p>
+					<p>比翼连枝当日愿</p>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

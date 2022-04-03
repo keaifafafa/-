@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组复制</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/** arr.copyWith(target,start,end) **/
+			// 详细讲解在书中186页 
+			// target代表开始替换的位置，end是结束替换的位置，start是替换的开始元素（start和end不是一对！！！！）
+			let a = new Array('a','b','c','d',1,2,3,4,5);
+			console.log(a.copyWithin(2));
+			document.write(a.copyWithin(2) + '<br/>');
+			
+			let b = new Array('a','b','c','d',1,2,3,4,5);
+			console.log(b.copyWithin(2,1));
+			document.write(b.copyWithin(2,1) + '<br/>');
+			
+			let c = new Array('a','b','c','d',1,2,3,4,5);
+			console.log(c.copyWithin(2,1,4));
+			document.write(c.copyWithin(2,1,4) + '<br/>');
+			
+			// 数组的遍历
+			let arr = [[1,7,6,8,9],[7,2,3,6,9],[4,5,2,8,6]];
+			for(let i= 0; i < arr.length; i++){
+				for(let j = 0; j < arr[i].length; j++){
+					document.write(arr[i][j] + '&nbsp');
+					console.log(arr[i][j]);
+				}
+				document.write('<br/>');
+			}
+		</script>
+	</body>
+</html>

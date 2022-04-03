@@ -1,0 +1,13 @@
+/* 顺序是固定的 */
+a:link{
+	background-color: cyan;
+}
+a:visited{
+	background-color: red;
+}
+a:hover{
+	background-color: deeppink;
+}
+a:active{
+	background-color: yellow;
+}

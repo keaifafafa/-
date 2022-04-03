@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tittle</title>
+	</head>
+	<body>
+		<script>
+//			'use strict';
+			var abs1 = function(){
+				//所有变量的声明都要放在头部  和C语言一样
+//				let x = 1;
+				
+				var abs2 = function(){
+					//在JavaScript中，函数查找变量是从自身函数开始，由内向外查找的
+					let x = 10;
+					let y = x + 1;
+					
+					console.log(y);
+					console.log(x);
+				}
+				abs2();
+				//内部函数可访问外部函数的成员，外部函数不可以访问内部函数的成员
+//				let z = y;
+			}
+			
+			abs1();
+			
+		</script>
+	</body>
+</html>

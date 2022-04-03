@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tittle</title>
+	</head>
+	<body>
+		<script>
+			var student = {
+				name:'Alna',
+				age:19,
+				run:function(){
+					console.log(this.name+' is Runing');
+				}
+			}
+			
+			var xiaoming = {
+				name:'xiaoming',
+				age:20
+			}
+			
+			//调用_proto_函数 类似java里的继承
+			xiaoming.__proto__ = student; //小明的原型是student
+			
+			var bird = {
+				name:'bird',
+				age:5,
+				fly:function(){
+					console.log(this.name+' is Flying');
+				}
+			}
+			
+			//使用同样的方法 即可继承 bird
+			xiaoming.__proto__ = bird;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>层次选择器</title>
+		<style>
+			/*1.后代选择器*/
+			/*body p{
+				background: red;
+			}*/
+			
+			
+			/*2.子选择器*/
+			body > p{
+				background:green;
+			}
+			
+			/*3.相邻兄弟选择器
+			 只有一个，相邻（向下）*/
+			/*.Class + h1{
+				color: blue;
+			}*/
+			
+			/*4.通用选择器
+			 选择下面所有的同类*/
+			/*
+			.Class~p{
+				color: deeppink;
+			}
+			*/
+		</style>
+		
+	</head>
+	<body>
+		<p>P1</p>
+		<p>P2</p>
+		<p>P3</p>
+		<ul>
+			<li><p>P4</p></li>
+			<li><p>P5</p></li>
+			<li><p>P6</p></li>
+		</ul>
+		
+	</body>
+</html>

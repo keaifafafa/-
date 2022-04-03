@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Map 和 Set</title>
+	</head>
+	<body>
+		<script>
+			//ES6新特性
+			var map = new Map([['tom',100],['jack',90],['Bob',80]]);
+			var name = map.get('tom');//通过key获得value
+			map.set('admin',123456);//新增或者修改
+			console.log(name);//打印
+			
+			//set 无序不重复的集合
+			var set = new Set([3,1,1,1,1,1]);
+			/*set.add(520);//增加函数
+			set.delete(1);//删除函数*/
+			console.log(set.has(3));//是否包含某个元素
+		</script>
+	</body>
+</html>
